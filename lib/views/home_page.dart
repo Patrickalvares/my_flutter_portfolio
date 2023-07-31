@@ -6,9 +6,14 @@ import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -26,10 +31,19 @@ class HomePage extends StatelessWidget {
             horizontal: 60,
           ),
           child: Row(children: [
-            Text(
-              'Portfólio',
-              style: AppTextStyles.headerTextStyle()
-                  .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Meu Portfólio',
+                  style: AppTextStyles.headerTextStyle()
+                      .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
+                ),
+                Text(
+                  'Feito por mim ultilizando Flutter',
+                  style: TextStyle(fontSize: 15, color: Colors.white),
+                )
+              ],
             ),
             const Spacer(),
             const SizedBox(
@@ -114,8 +128,6 @@ class HomePage extends StatelessWidget {
                     Row(
                       children: [
                         SocialButton(
-                          outerBackgroundColor: AppColors.themeColor,
-                          innerBackgroundColor: AppColors.backgroundColor,
                           imageAsset: AppAssets.facebook,
                           imageWidth: 24,
                           imageHeight: 20,
@@ -123,8 +135,6 @@ class HomePage extends StatelessWidget {
                         ),
                         Constants.sizedBox(width: 12),
                         SocialButton(
-                          outerBackgroundColor: AppColors.themeColor,
-                          innerBackgroundColor: AppColors.backgroundColor,
                           imageAsset: AppAssets.linkedin,
                           imageWidth: 24,
                           imageHeight: 20,
@@ -132,8 +142,6 @@ class HomePage extends StatelessWidget {
                         ),
                         Constants.sizedBox(width: 12),
                         SocialButton(
-                          outerBackgroundColor: AppColors.themeColor,
-                          innerBackgroundColor: AppColors.backgroundColor,
                           imageAsset: AppAssets.github,
                           imageWidth: 24,
                           imageHeight: 20,
@@ -141,8 +149,6 @@ class HomePage extends StatelessWidget {
                         ),
                         Constants.sizedBox(width: 12),
                         SocialButton(
-                          outerBackgroundColor: AppColors.themeColor,
-                          innerBackgroundColor: AppColors.backgroundColor,
                           imageAsset: AppAssets.instagram,
                           imageWidth: 24,
                           imageHeight: 20,
@@ -154,6 +160,8 @@ class HomePage extends StatelessWidget {
                     MaterialButton(
                       onPressed: () {},
                       color: AppColors.themeColor,
+                      hoverColor: AppColors.hoverColor,
+                      elevation: 12,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 18),
                       shape: OutlineInputBorder(
