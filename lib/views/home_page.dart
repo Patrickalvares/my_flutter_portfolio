@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/components/social_button.dart';
+import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
@@ -111,12 +113,59 @@ class HomePage extends StatelessWidget {
                     Constants.sizedBox(height: 22),
                     Row(
                       children: [
-                        CircleAvatar(
-                          maxRadius: 24,
-                          backgroundColor: AppColors.themeColor,
-                        )
+                        SocialButton(
+                          outerBackgroundColor: AppColors.themeColor,
+                          innerBackgroundColor: AppColors.backgroundColor,
+                          imageAsset: AppAssets.facebook,
+                          imageWidth: 24,
+                          imageHeight: 20,
+                          color: Colors.white,
+                        ),
+                        Constants.sizedBox(width: 12),
+                        SocialButton(
+                          outerBackgroundColor: AppColors.themeColor,
+                          innerBackgroundColor: AppColors.backgroundColor,
+                          imageAsset: AppAssets.linkedin,
+                          imageWidth: 24,
+                          imageHeight: 20,
+                          color: Colors.white,
+                        ),
+                        Constants.sizedBox(width: 12),
+                        SocialButton(
+                          outerBackgroundColor: AppColors.themeColor,
+                          innerBackgroundColor: AppColors.backgroundColor,
+                          imageAsset: AppAssets.github,
+                          imageWidth: 24,
+                          imageHeight: 20,
+                          color: Colors.white,
+                        ),
+                        Constants.sizedBox(width: 12),
+                        SocialButton(
+                          outerBackgroundColor: AppColors.themeColor,
+                          innerBackgroundColor: AppColors.backgroundColor,
+                          imageAsset: AppAssets.instagram,
+                          imageWidth: 24,
+                          imageHeight: 20,
+                          color: Colors.white,
+                        ),
                       ],
-                    )
+                    ),
+                    Constants.sizedBox(height: 18),
+                    MaterialButton(
+                      onPressed: () {},
+                      color: AppColors.themeColor,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 18),
+                      shape: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      height: 55,
+                      minWidth: 120,
+                      child: Text(
+                        'Download do Currículo',
+                        style: AppTextStyles.headerTextStyle(),
+                      ),
+                    ),
                   ],
                 )
               ],
