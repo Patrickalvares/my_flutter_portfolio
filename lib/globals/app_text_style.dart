@@ -26,4 +26,12 @@ class AppTextStyles {
       color: Colors.white,
     );
   }
+
+  static TextStyle normalStyle() {
+    return GoogleFonts.mukta(
+        fontWeight: FontWeight.w500,
+        fontSize: 16,
+        color: Colors.white,
+        letterSpacing: 1);
+  }
 }

@@ -98,6 +98,25 @@ class HomePage extends StatelessWidget {
                         )
                       ],
                     ),
+                    Constants.sizedBox(height: 15),
+                    SizedBox(
+                      width: size.width * 0.5,
+                      child: Text(
+                        'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
+                        'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
+                        'oisudfh posiduf opsidhjfsopiidfhopisuqwpie op´qpuqw poiqwu qpiw uqpw uqpwi',
+                        style: AppTextStyles.normalStyle(),
+                      ),
+                    ),
+                    Constants.sizedBox(height: 22),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          maxRadius: 24,
+                          backgroundColor: AppColors.themeColor,
+                        )
+                      ],
+                    )
                   ],
                 )
               ],
