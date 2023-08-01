@@ -21,8 +21,9 @@ class _ProfileAnimationState extends State<ProfileAnimation>
         AnimationController(vsync: this, duration: const Duration(seconds: 3))
           ..repeat(reverse: true);
 
-    _animation = Tween(begin: const Offset(0, -0.1), end: const Offset(0, 0.1))
-        .animate(_controller);
+    _animation =
+        Tween(begin: const Offset(0, -0.05), end: const Offset(0, 0.05))
+            .animate(_controller);
   }
 
   @override
@@ -37,18 +38,9 @@ class _ProfileAnimationState extends State<ProfileAnimation>
       delay: const Duration(milliseconds: 3000),
       child: SlideTransition(
         position: _animation,
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.blueAccent,
-              width: 8.0,
-            ),
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          child: Image.asset(
-            AppAssets.myPhoto,
-            width: 200,
-          ),
+        child: Image.asset(
+          AppAssets.myPhoto,
+          width: 450,
         ),
       ),
     );

@@ -3,7 +3,9 @@ import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 
 class AnimatedButton extends StatefulWidget {
-  const AnimatedButton({super.key});
+  final String buttonName;
+
+  const AnimatedButton({super.key, required this.buttonName});
 
   @override
   AnimatedButtonState createState() => AnimatedButtonState();
@@ -49,7 +51,7 @@ class AnimatedButtonState extends State<AnimatedButton>
             height: 55,
             minWidth: 120,
             child: Text(
-              'Download do Currículo',
+              widget.buttonName,
               style: AppTextStyles.headerTextStyle(),
             ),
           ),

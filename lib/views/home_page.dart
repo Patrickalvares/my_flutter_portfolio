@@ -1,13 +1,15 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/components/cv_button.dart';
+import 'package:my_flutter_portfolio/components/animated_button.dart';
 import 'package:my_flutter_portfolio/components/profile_animation.dart';
 import 'package:my_flutter_portfolio/components/social_button.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
+import 'package:my_flutter_portfolio/views/about_me.dart';
+import 'package:my_flutter_portfolio/views/my_services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -78,17 +80,20 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
             top: size.height * 0.3,
-            left: size.height * 0.2,
-            right: size.height * 0.2),
+            left: size.height * 0.0,
+            right: size.height * 0.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         FadeInDown(
@@ -198,9 +203,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Constants.sizedBox(height: 18),
                         FadeInUp(
-                            duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 6800),
-                            child: const AnimatedButton())
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 6800),
+                          child: const AnimatedButton(
+                            buttonName: 'Download do Currículo',
+                          ),
+                        ),
                       ],
                     ),
                     Constants.sizedBox(width: 20),
@@ -208,11 +216,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         ProfileAnimation(),
                       ],
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
-            )
+            ),
+            Constants.sizedBox(height: 220),
+            const AboutMe(),
+            const MyServices(),
           ],
         ),
       ),
