@@ -3,4 +3,5 @@ class AppAssets {
   static String github = 'lib/assets/images/git.png';
   static String linkedin = 'lib/assets/images/in.png';
   static String instagram = 'lib/assets/images/insta.png';
+  static String myPhoto = 'lib/assets/images/me.jpg';
 }

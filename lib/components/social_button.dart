@@ -7,7 +7,7 @@ class SocialButton extends StatefulWidget {
   final double imageHeight;
   final Color color;
 
-  SocialButton({
+  const SocialButton({
     super.key,
     required this.imageAsset,
     required this.imageWidth,

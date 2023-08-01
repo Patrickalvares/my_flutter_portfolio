@@ -1,5 +1,8 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/components/cv_button.dart';
+import 'package:my_flutter_portfolio/components/profile_animation.dart';
 import 'package:my_flutter_portfolio/components/social_button.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
@@ -39,8 +42,8 @@ class _HomePageState extends State<HomePage> {
                   style: AppTextStyles.headerTextStyle()
                       .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
                 ),
-                Text(
-                  'Feito por mim ultilizando Flutter',
+                const Text(
+                  'Feito por mim ultilizando Flutter Web',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 )
               ],
@@ -81,99 +84,131 @@ class _HomePageState extends State<HomePage> {
           children: [
             Row(
               children: [
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Hello World, it\'s me',
-                      style: AppTextStyles.montseratStyle(),
-                    ),
-                    Constants.sizedBox(height: 15),
-                    Text(
-                      'Patrick Alvares',
-                      style: AppTextStyles.headingStyles(),
-                    ),
-                    Constants.sizedBox(height: 15),
-                    Row(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AnimatedTextKit(
-                          animatedTexts: [
-                            TyperAnimatedText('Desenvolvedor Flutter',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.blue.shade400)),
-                            TyperAnimatedText('Desenvolvedor Mobile',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.yellow)),
-                            TyperAnimatedText('Engenheiro de Software',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.red)),
+                        FadeInDown(
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 700),
+                          child: Text(
+                            'Hello World, it\'s me',
+                            style: AppTextStyles.montseratStyle(),
+                          ),
+                        ),
+                        Constants.sizedBox(height: 15),
+                        FadeInRight(
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 1700),
+                          child: Text(
+                            'Patrick Alvares',
+                            style: AppTextStyles.headingStyles(),
+                          ),
+                        ),
+                        Constants.sizedBox(height: 15),
+                        Row(
+                          children: [
+                            FadeInLeft(
+                              duration: const Duration(milliseconds: 1500),
+                              delay: const Duration(milliseconds: 2700),
+                              child: AnimatedTextKit(
+                                repeatForever: true,
+                                animatedTexts: [
+                                  TyperAnimatedText('Desenvolvedor Flutter',
+                                      textStyle: AppTextStyles.montseratStyle(
+                                          color: Colors.blue.shade400)),
+                                  TyperAnimatedText('Desenvolvedor Mobile',
+                                      textStyle: AppTextStyles.montseratStyle(
+                                          color: Colors.yellow)),
+                                  TyperAnimatedText('Engenheiro de Software',
+                                      textStyle: AppTextStyles.montseratStyle(
+                                          color: Colors.red)),
+                                ],
+                                pause: const Duration(milliseconds: 1000),
+                                stopPauseOnTap: true,
+                                displayFullTextOnTap: true,
+                              ),
+                            )
                           ],
-                          pause: const Duration(milliseconds: 1000),
-                          stopPauseOnTap: true,
-                          displayFullTextOnTap: true,
-                        )
+                        ),
+                        Constants.sizedBox(height: 15),
+                        SizedBox(
+                          width: size.width * 0.5,
+                          child: FadeInUp(
+                            duration: const Duration(milliseconds: 1500),
+                            delay: const Duration(milliseconds: 3700),
+                            child: Text(
+                              'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
+                              'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
+                              'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
+                              style: AppTextStyles.normalStyle(),
+                            ),
+                          ),
+                        ),
+                        Constants.sizedBox(height: 22),
+                        Row(
+                          children: [
+                            FadeIn(
+                              duration: const Duration(milliseconds: 1500),
+                              delay: const Duration(milliseconds: 4700),
+                              child: SocialButton(
+                                imageAsset: AppAssets.facebook,
+                                imageWidth: 24,
+                                imageHeight: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Constants.sizedBox(width: 12),
+                            FadeIn(
+                              duration: const Duration(milliseconds: 1500),
+                              delay: const Duration(milliseconds: 5200),
+                              child: SocialButton(
+                                imageAsset: AppAssets.linkedin,
+                                imageWidth: 24,
+                                imageHeight: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Constants.sizedBox(width: 12),
+                            FadeIn(
+                              duration: const Duration(milliseconds: 1500),
+                              delay: const Duration(milliseconds: 5800),
+                              child: SocialButton(
+                                imageAsset: AppAssets.github,
+                                imageWidth: 24,
+                                imageHeight: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Constants.sizedBox(width: 12),
+                            FadeIn(
+                              duration: const Duration(milliseconds: 1500),
+                              delay: const Duration(milliseconds: 6300),
+                              child: SocialButton(
+                                imageAsset: AppAssets.instagram,
+                                imageWidth: 24,
+                                imageHeight: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Constants.sizedBox(height: 18),
+                        FadeInUp(
+                            duration: const Duration(milliseconds: 1500),
+                            delay: const Duration(milliseconds: 6800),
+                            child: const AnimatedButton())
                       ],
                     ),
-                    Constants.sizedBox(height: 15),
-                    SizedBox(
-                      width: size.width * 0.5,
-                      child: Text(
-                        'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
-                        'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
-                        'oisudfh posiduf opsidhjfsopiidfhopisuqwpie op´qpuqw poiqwu qpiw uqpw uqpwi',
-                        style: AppTextStyles.normalStyle(),
-                      ),
-                    ),
-                    Constants.sizedBox(height: 22),
-                    Row(
+                    Constants.sizedBox(width: 20),
+                    const Column(
                       children: [
-                        SocialButton(
-                          imageAsset: AppAssets.facebook,
-                          imageWidth: 24,
-                          imageHeight: 20,
-                          color: Colors.white,
-                        ),
-                        Constants.sizedBox(width: 12),
-                        SocialButton(
-                          imageAsset: AppAssets.linkedin,
-                          imageWidth: 24,
-                          imageHeight: 20,
-                          color: Colors.white,
-                        ),
-                        Constants.sizedBox(width: 12),
-                        SocialButton(
-                          imageAsset: AppAssets.github,
-                          imageWidth: 24,
-                          imageHeight: 20,
-                          color: Colors.white,
-                        ),
-                        Constants.sizedBox(width: 12),
-                        SocialButton(
-                          imageAsset: AppAssets.instagram,
-                          imageWidth: 24,
-                          imageHeight: 20,
-                          color: Colors.white,
-                        ),
+                        ProfileAnimation(),
                       ],
-                    ),
-                    Constants.sizedBox(height: 18),
-                    MaterialButton(
-                      onPressed: () {},
-                      color: AppColors.themeColor,
-                      hoverColor: AppColors.hoverColor,
-                      elevation: 12,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 18),
-                      shape: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      height: 55,
-                      minWidth: 120,
-                      child: Text(
-                        'Download do Currículo',
-                        style: AppTextStyles.headerTextStyle(),
-                      ),
-                    ),
+                    )
                   ],
                 )
               ],
