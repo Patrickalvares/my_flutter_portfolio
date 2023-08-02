@@ -4,4 +4,7 @@ class AppAssets {
   static String linkedin = 'lib/assets/images/in.png';
   static String instagram = 'lib/assets/images/insta.png';
   static String myPhoto = 'lib/assets/images/me.png';
+  static String code = 'lib/assets/images/coding.png';
+  static String brush = 'lib/assets/images/brush-stroke.png';
+  static String graph = 'lib/assets/images/analytics.png';
 }
