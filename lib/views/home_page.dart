@@ -4,6 +4,7 @@ import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
 import 'package:my_flutter_portfolio/views/about_me.dart';
 import 'package:my_flutter_portfolio/views/first_view.dart';
+import 'package:my_flutter_portfolio/views/my_portfolio.dart';
 import 'package:my_flutter_portfolio/views/my_services.dart';
 
 class HomePage extends StatefulWidget {
@@ -84,6 +85,7 @@ class _HomePageState extends State<HomePage> {
             Constants.sizedBox(height: 220),
             const AboutMe(),
             const MyServices(),
+            const MyPortfolio(),
           ],
         ),
       ),

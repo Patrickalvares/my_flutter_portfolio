@@ -7,4 +7,6 @@ class AppAssets {
   static String code = 'lib/assets/images/coding.png';
   static String brush = 'lib/assets/images/brush-stroke.png';
   static String graph = 'lib/assets/images/analytics.png';
+  static String work1 = 'lib/assets/images/work1.jpg';
+  static String work2 = 'lib/assets/images/work2.jpg';
 }

@@ -62,7 +62,8 @@ class _FirstViewState extends State<FirstView> {
                                   color: Colors.yellow)),
                           TyperAnimatedText('Desenvolvedor Flutter',
                               textStyle: AppTextStyles.montseratStyle(
-                                  color: Colors.blue.shade400)),
+                                  color:
+                                      const Color.fromARGB(255, 32, 154, 255))),
                           TyperAnimatedText('Estudante de Eng. de Software',
                               textStyle: AppTextStyles.montseratStyle(
                                   color: Colors.orange)),
