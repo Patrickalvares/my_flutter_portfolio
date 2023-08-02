@@ -5,5 +5,6 @@ class AppColors {
   static Color themeColor = const Color(0xff007BA7);
   static Color hoverColor = Colors.greenAccent;
   static Color backgroundColor2 = const Color(0XFF004953);
+  static Color backgroundColor3 = const Color.fromARGB(255, 1, 67, 76);
   static Color robinEdgeBlue = const Color(0xff00CCCC);
 }

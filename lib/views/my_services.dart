@@ -14,6 +14,10 @@ class MyServices extends StatefulWidget {
 }
 
 class _MyServicesState extends State<MyServices> {
+  bool isContainerOneHover = false;
+  bool isContainerTwoHover = false;
+  bool isContainerThreeHover = false;
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -49,15 +53,38 @@ class _MyServicesState extends State<MyServices> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InfoAnimatedConatiner(
-                  imageAsset: AppAssets.code,
-                  title: 'Desenvolvimento de Aplicativos'),
+              InkWell(
+                onTap: () {},
+                onHover: (value) => setState(() {
+                  isContainerOneHover = value;
+                }),
+                child: InfoAnimatedConatiner(
+                    hover: isContainerOneHover,
+                    imageAsset: AppAssets.code,
+                    title: 'Desenvolvimento de Aplicativos'),
+              ),
               Constants.sizedBox(width: 18),
-              InfoAnimatedConatiner(
-                  imageAsset: AppAssets.brush, title: 'UX/UI'),
+              InkWell(
+                onTap: () {},
+                onHover: (value) => setState(() {
+                  isContainerTwoHover = value;
+                }),
+                child: InfoAnimatedConatiner(
+                    hover: isContainerTwoHover,
+                    imageAsset: AppAssets.brush,
+                    title: 'UX/UI'),
+              ),
               Constants.sizedBox(width: 18),
-              InfoAnimatedConatiner(
-                  imageAsset: AppAssets.graph, title: 'Crescimento')
+              InkWell(
+                onTap: () {},
+                onHover: (value) => setState(() {
+                  isContainerThreeHover = value;
+                }),
+                child: InfoAnimatedConatiner(
+                    hover: isContainerThreeHover,
+                    imageAsset: AppAssets.graph,
+                    title: 'Crescimento'),
+              ),
             ],
           )
         ],

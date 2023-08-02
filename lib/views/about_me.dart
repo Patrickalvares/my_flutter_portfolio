@@ -17,69 +17,72 @@ class AboutMe extends StatelessWidget {
       height: size.height,
       color: AppColors.backgroundColor2,
       alignment: Alignment.center,
-      child: Row(
-        children: [
-          Image.asset(
-            AppAssets.myPhoto,
-            height: 450,
-            width: 400,
-          ),
-          Constants.sizedBox(width: 25),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                FadeInRight(
-                  duration: const Duration(milliseconds: 1500),
-                  delay: const Duration(milliseconds: 1700),
-                  child: RichText(
-                    text: TextSpan(
-                        text: 'Sobre ',
-                        style: AppTextStyles.headingStyles().copyWith(
-                          fontSize: 30,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: 'Mim',
-                            style: AppTextStyles.headingStyles().copyWith(
-                              fontSize: 30,
-                              color: AppColors.robinEdgeBlue,
-                            ),
-                          ),
-                        ]),
-                  ),
-                ),
-                Constants.sizedBox(height: 6),
-                FadeInRight(
-                  duration: const Duration(milliseconds: 1200),
-                  child: Text(
-                    'Desenvolvedor Flutter',
-                    style: AppTextStyles.montseratStyle(color: Colors.white),
-                  ),
-                ),
-                Constants.sizedBox(width: 6),
-                FadeInLeft(
-                  duration: const Duration(milliseconds: 1600),
-                  child: Text(
-                    'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
-                    'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
-                    'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
-                    style: AppTextStyles.normalStyle(),
-                  ),
-                ),
-                Constants.sizedBox(width: 15),
-                FadeInUp(
-                  duration: const Duration(milliseconds: 1500),
-                  delay: const Duration(milliseconds: 6800),
-                  child: const AnimatedButton(
-                    buttonName: 'Leia Mais',
-                  ),
-                ),
-              ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 200),
+        child: Row(
+          children: [
+            Image.asset(
+              AppAssets.myPhoto,
+              height: 450,
+              width: 400,
             ),
-          )
-        ],
+            Constants.sizedBox(width: 25),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 1500),
+                    delay: const Duration(milliseconds: 1700),
+                    child: RichText(
+                      text: TextSpan(
+                          text: 'Sobre ',
+                          style: AppTextStyles.headingStyles().copyWith(
+                            fontSize: 30,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Mim',
+                              style: AppTextStyles.headingStyles().copyWith(
+                                fontSize: 30,
+                                color: AppColors.robinEdgeBlue,
+                              ),
+                            ),
+                          ]),
+                    ),
+                  ),
+                  Constants.sizedBox(height: 6),
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 1200),
+                    child: Text(
+                      'Desenvolvedor Flutter',
+                      style: AppTextStyles.montseratStyle(color: Colors.white),
+                    ),
+                  ),
+                  Constants.sizedBox(width: 6),
+                  FadeInLeft(
+                    duration: const Duration(milliseconds: 1600),
+                    child: Text(
+                      'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
+                      'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
+                      'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
+                      style: AppTextStyles.normalStyle(),
+                    ),
+                  ),
+                  Constants.sizedBox(width: 15),
+                  FadeInUp(
+                    duration: const Duration(milliseconds: 1500),
+                    delay: const Duration(milliseconds: 6800),
+                    child: const AnimatedButton(
+                      buttonName: 'Leia Mais',
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

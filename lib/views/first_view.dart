@@ -57,15 +57,24 @@ class _FirstViewState extends State<FirstView> {
                       child: AnimatedTextKit(
                         repeatForever: true,
                         animatedTexts: [
-                          TyperAnimatedText('Desenvolvedor Flutter',
-                              textStyle: AppTextStyles.montseratStyle(
-                                  color: Colors.blue.shade400)),
                           TyperAnimatedText('Desenvolvedor Mobile',
                               textStyle: AppTextStyles.montseratStyle(
                                   color: Colors.yellow)),
-                          TyperAnimatedText('Engenheiro de Software',
+                          TyperAnimatedText('Desenvolvedor Flutter',
+                              textStyle: AppTextStyles.montseratStyle(
+                                  color: Colors.blue.shade400)),
+                          TyperAnimatedText('Estudante de Eng. de Software',
+                              textStyle: AppTextStyles.montseratStyle(
+                                  color: Colors.orange)),
+                          TyperAnimatedText('Amante da Tecnologia',
                               textStyle: AppTextStyles.montseratStyle(
                                   color: Colors.red)),
+                          TyperAnimatedText('Aluno Dedicado',
+                              textStyle: AppTextStyles.montseratStyle(
+                                  color: Colors.purple)),
+                          TyperAnimatedText('Futuro Tech Leader',
+                              textStyle: AppTextStyles.montseratStyle(
+                                  color: Colors.green)),
                         ],
                         pause: const Duration(milliseconds: 1000),
                         stopPauseOnTap: true,
