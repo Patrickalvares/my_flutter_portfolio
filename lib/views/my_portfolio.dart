@@ -1,6 +1,5 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/components/animated_container.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
@@ -76,13 +75,15 @@ class _MyPortfolioState extends State<MyPortfolio> {
                 child: InkWell(
                   onTap: () {},
                   onHover: (value) {
-                    setState(() {
+                    if (value) {
                       setState(() {
                         if (value) {
                           hoveredIndex = index;
                         }
                       });
-                    });
+                    } else {
+                      hoveredIndex = null;
+                    }
                   },
                   child: Stack(
                     children: [
@@ -129,6 +130,17 @@ class _MyPortfolioState extends State<MyPortfolio> {
                                     .copyWith(fontSize: 20),
                                 textAlign: TextAlign.center,
                               ),
+                              Constants.sizedBox(height: 30),
+                              CircleAvatar(
+                                maxRadius: 25,
+                                backgroundColor: Colors.white,
+                                child: Image.asset(
+                                  AppAssets.share,
+                                  width: 25,
+                                  height: 25,
+                                  fit: BoxFit.fill,
+                                ),
+                              )
                             ],
                           ),
                         ),

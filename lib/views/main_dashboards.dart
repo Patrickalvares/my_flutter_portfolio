@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
-import 'package:my_flutter_portfolio/views/about_me.dart';
-import 'package:my_flutter_portfolio/views/first_view.dart';
-import 'package:my_flutter_portfolio/views/my_portfolio.dart';
-import 'package:my_flutter_portfolio/views/my_services.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+import '../globals/constants.dart';
+import 'about_me.dart';
+import 'first_view.dart';
+import 'my_portfolio.dart';
+import 'my_services.dart';
+
+class MainDashBoard extends StatefulWidget {
+  const MainDashBoard({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<MainDashBoard> createState() => _MainDashBoardState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MainDashBoardState extends State<MainDashBoard> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
