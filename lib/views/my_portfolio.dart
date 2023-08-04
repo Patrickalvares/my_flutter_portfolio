@@ -14,6 +14,8 @@ class MyPortfolio extends StatefulWidget {
 }
 
 class _MyPortfolioState extends State<MyPortfolio> {
+  final onHoverEffect = Matrix4.identity()..scale(1.0);
+
   List<String> images = [
     AppAssets.work1,
     AppAssets.work2,
@@ -22,6 +24,8 @@ class _MyPortfolioState extends State<MyPortfolio> {
     AppAssets.work1,
     AppAssets.work2,
   ];
+
+  var hoveredIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -67,39 +71,70 @@ class _MyPortfolioState extends State<MyPortfolio> {
             ),
             itemBuilder: (context, index) {
               var image = images[index];
-              return ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Stack(
-                  children: [
-                    Image(
-                      image: AssetImage(image),
-                      fit: BoxFit.fill,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.greenAccent.withOpacity(0.3),
-                            Colors.greenAccent.withOpacity(0.4),
-                            Colors.greenAccent.withOpacity(0.5),
-                            Colors.greenAccent.withOpacity(0.6),
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
+              return FadeInUpBig(
+                duration: const Duration(milliseconds: 1600),
+                child: InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      setState(() {
+                        if (value) {
+                          hoveredIndex = index;
+                        }
+                      });
+                    });
+                  },
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image(
+                          image: AssetImage(image),
+                          fit: BoxFit.fill,
                         ),
                       ),
-                      child: Column(
-                        children: [
-                          Text(
-                            'Desenvolvimento de aplicativos',
-                            style: AppTextStyles.montseratStyle(
-                                    color: Colors.black87)
-                                .copyWith(fontSize: 18),
+                      Visibility(
+                        visible: index == hoveredIndex,
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          transform:
+                              index == hoveredIndex ? onHoverEffect : null,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.greenAccent.withOpacity(0.3),
+                                Colors.greenAccent.withOpacity(0.4),
+                                Colors.greenAccent.withOpacity(0.5),
+                                Colors.greenAccent.withOpacity(0.6),
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                            ),
                           ),
-                        ],
+                          child: Column(
+                            children: [
+                              Text(
+                                'Desenvolvimento de aplicativos',
+                                style: AppTextStyles.montseratStyle(
+                                        color: Colors.black87)
+                                    .copyWith(fontSize: 20),
+                              ),
+                              Constants.sizedBox(height: 15),
+                              Text(
+                                'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha ',
+                                style: AppTextStyles.normalStyle()
+                                    .copyWith(fontSize: 20),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             },
