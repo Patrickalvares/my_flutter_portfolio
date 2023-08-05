@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
-import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-
 import '../globals/constants.dart';
 import 'about_me.dart';
-import 'first_view.dart';
+import 'first-view/first_view.dart';
 import 'my_portfolio.dart';
 import 'my_services.dart';
 
@@ -19,60 +18,21 @@ class _MainDashBoardState extends State<MainDashBoard> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+    bool printDrawer = false;
+
+    PreferredSizeWidget appBar;
+
+    if (size.width > 1182) {
+      appBar = const DesktopAppBar();
+      printDrawer = false;
+    } else {
+      appBar = const NonDesktopAppBar();
+      printDrawer = true;
+    }
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: AppBar(
-        backgroundColor: AppColors.backgroundColor,
-        toolbarHeight: 90,
-        titleSpacing: 100,
-        elevation: 2,
-        bottomOpacity: 23,
-        title: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 60,
-          ),
-          child: Row(children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Meu Portfólio',
-                  style: AppTextStyles.headerTextStyle()
-                      .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
-                ),
-                const Text(
-                  'Desenvolvido por mim com Flutter Web',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                )
-              ],
-            ),
-            const Spacer(),
-            const SizedBox(
-              width: 40,
-            ),
-            Text('início', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            Text('Sobre Mim', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            Text('Serviços', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            Text('Portfólio', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            Text('Contacte-me', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-          ]),
-        ),
-      ),
+      appBar: appBar,
+      drawer: printDrawer ? const CustomDrawer() : null,
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
             top: size.height * 0.2,
