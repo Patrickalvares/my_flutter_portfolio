@@ -22,7 +22,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
 
     PreferredSizeWidget appBar;
 
-    if (size.width > 1182) {
+    if (size.width > 1170) {
       appBar = const DesktopAppBar();
       printDrawer = false;
     } else {
@@ -35,7 +35,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
       drawer: printDrawer ? const CustomDrawer() : null,
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
-            top: size.height * 0.2,
+            top: (size.width > 970) ? size.height * 0.2 : size.height * 0.01,
             left: size.height * 0.0,
             right: size.height * 0.0),
         child: Column(

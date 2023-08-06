@@ -17,9 +17,11 @@ class TabletFirstView extends StatelessWidget {
 
     return Column(
       children: [
-        const Column(
+        Column(
           children: [
-            ProfileAnimation(),
+            ProfileAnimation(
+              size: size,
+            ),
           ],
         ),
         Row(
@@ -47,11 +49,13 @@ class TabletFirstView extends StatelessWidget {
                       delay: const Duration(milliseconds: 1700),
                       child: Text(
                         'Patrick Alvares',
-                        style: AppTextStyles.headingStyles(),
+                        style: AppTextStyles.headingStyles()
+                            .copyWith(fontSize: (size.width > 520) ? 36 : 25),
                       ),
                     ),
                     Constants.sizedBox(height: 15),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         FadeInLeft(
                           duration: const Duration(milliseconds: 1500),
@@ -66,7 +70,7 @@ class TabletFirstView extends StatelessWidget {
                                   textStyle: AppTextStyles.montseratStyle(
                                       color: const Color.fromARGB(
                                           255, 32, 154, 255))),
-                              TyperAnimatedText('Estudante de Eng. de Software',
+                              TyperAnimatedText('Eng. de Software',
                                   textStyle: AppTextStyles.montseratStyle(
                                       color: Colors.orange)),
                               TyperAnimatedText('Amante da Tecnologia',

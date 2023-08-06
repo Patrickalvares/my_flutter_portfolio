@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 
 class ProfileAnimation extends StatefulWidget {
-  const ProfileAnimation({super.key});
+  final Size size;
+  const ProfileAnimation({super.key, required this.size});
 
   @override
   State<ProfileAnimation> createState() => _ProfileAnimationState();
@@ -40,7 +41,7 @@ class _ProfileAnimationState extends State<ProfileAnimation>
         position: _animation,
         child: Image.asset(
           AppAssets.myPhoto,
-          width: 450,
+          width: (widget.size.width > 500) ? 450 : 380,
         ),
       ),
     );

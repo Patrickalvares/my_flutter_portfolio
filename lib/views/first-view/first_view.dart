@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/views/first-view/desktop_first_view.dart';
-import 'package:my_flutter_portfolio/views/first-view/tablet_first_view.dart';
+import 'package:my_flutter_portfolio/views/first-view/mobile_first_view.dart';
 
 class FirstView extends StatefulWidget {
   const FirstView({super.key});
@@ -16,12 +16,10 @@ class _FirstViewState extends State<FirstView> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (size.width > 800) {
+        if (size.width > 970) {
           return DesktopFirstView();
-        } else if (size.width < 800) {
-          return TabletFirstView();
         } else {
-          return Container();
+          return TabletFirstView();
         }
       },
     );

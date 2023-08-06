@@ -60,9 +60,7 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             Text('Contacte-me', style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
+            const Spacer(),
           ]),
         ),
       ),
