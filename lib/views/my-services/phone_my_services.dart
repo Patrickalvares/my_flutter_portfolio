@@ -5,14 +5,14 @@ import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 
-class DesktopMyServices extends StatefulWidget {
-  const DesktopMyServices({super.key});
+class PhoneMyServices extends StatefulWidget {
+  const PhoneMyServices({super.key});
 
   @override
-  State<DesktopMyServices> createState() => _DesktopMyServicesState();
+  State<PhoneMyServices> createState() => _PhoneMyServicesState();
 }
 
-class _DesktopMyServicesState extends State<DesktopMyServices> {
+class _PhoneMyServicesState extends State<PhoneMyServices> {
   bool isContainerOneHover = false;
   bool isContainerTwoHover = false;
   bool isContainerThreeHover = false;
@@ -22,7 +22,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: size.height,
+      height: size.height * 2.2,
       color: AppColors.backgroundColor,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 12),
@@ -49,7 +49,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
             ),
           ),
           const SizedBox(height: 60),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
@@ -62,7 +62,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
                     imageAsset: AppAssets.code,
                     title: 'Desenvolvimento de Aplicativos'),
               ),
-              const SizedBox(width: 18),
+              const SizedBox(height: 18),
               InkWell(
                 onTap: () {},
                 onHover: (value) => setState(() {
@@ -73,7 +73,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
                     imageAsset: AppAssets.brush,
                     title: 'UX/UI'),
               ),
-              const SizedBox(width: 18),
+              const SizedBox(height: 18),
               InkWell(
                 onTap: () {},
                 onHover: (value) => setState(() {

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
 
 import '../../components/animated_button.dart';
 
@@ -53,7 +52,7 @@ class MobileAboutMe extends StatelessWidget {
                               ]),
                         ),
                       ),
-                      Constants.sizedBox(height: 6),
+                      const SizedBox(height: 6),
                       FadeInRight(
                         duration: const Duration(milliseconds: 1200),
                         child: Text(
@@ -62,7 +61,7 @@ class MobileAboutMe extends StatelessWidget {
                               AppTextStyles.montseratStyle(color: Colors.white),
                         ),
                       ),
-                      Constants.sizedBox(width: 6),
+                      const SizedBox(width: 6),
                       FadeInLeft(
                         duration: const Duration(milliseconds: 1600),
                         child: Text(
@@ -72,7 +71,7 @@ class MobileAboutMe extends StatelessWidget {
                           style: AppTextStyles.normalStyle(),
                         ),
                       ),
-                      Constants.sizedBox(height: 15),
+                      const SizedBox(height: 15),
                       FadeInUp(
                         duration: const Duration(milliseconds: 1500),
                         delay: const Duration(milliseconds: 6800),

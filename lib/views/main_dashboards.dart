@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
-import '../globals/constants.dart';
 import 'about-me/about_me.dart';
 import 'first-view/first_view.dart';
 import 'my_portfolio.dart';
@@ -42,7 +41,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const FirstView(),
-            Constants.sizedBox(height: 220),
+            const SizedBox(height: 220),
             const AboutMe(),
             const MyServices(),
             const MyPortfolio(),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
 
 import '../../components/animated_button.dart';
 
@@ -26,7 +25,7 @@ class DesktopAboutMe extends StatelessWidget {
               height: 450,
               width: 400,
             ),
-            Constants.sizedBox(width: 25),
+            const SizedBox(height: 25),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +51,7 @@ class DesktopAboutMe extends StatelessWidget {
                           ]),
                     ),
                   ),
-                  Constants.sizedBox(height: 6),
+                  const SizedBox(height: 6),
                   FadeInRight(
                     duration: const Duration(milliseconds: 1200),
                     child: Text(
@@ -60,7 +59,7 @@ class DesktopAboutMe extends StatelessWidget {
                       style: AppTextStyles.montseratStyle(color: Colors.white),
                     ),
                   ),
-                  Constants.sizedBox(width: 6),
+                  const SizedBox(width: 6),
                   FadeInLeft(
                     duration: const Duration(milliseconds: 1600),
                     child: Text(
@@ -70,7 +69,7 @@ class DesktopAboutMe extends StatelessWidget {
                       style: AppTextStyles.normalStyle(),
                     ),
                   ),
-                  Constants.sizedBox(width: 15),
+                  const SizedBox(width: 15),
                   FadeInUp(
                     duration: const Duration(milliseconds: 1500),
                     delay: const Duration(milliseconds: 6800),

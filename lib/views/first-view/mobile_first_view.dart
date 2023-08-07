@@ -6,7 +6,6 @@ import 'package:my_flutter_portfolio/components/profile_animation.dart';
 import 'package:my_flutter_portfolio/components/social_button.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
 
 class TabletFirstView extends StatelessWidget {
   const TabletFirstView({super.key});
@@ -43,7 +42,7 @@ class TabletFirstView extends StatelessWidget {
                         style: AppTextStyles.montseratStyle(),
                       ),
                     ),
-                    Constants.sizedBox(height: 15),
+                    const SizedBox(height: 15),
                     FadeInRight(
                       duration: const Duration(milliseconds: 1500),
                       delay: const Duration(milliseconds: 1700),
@@ -53,7 +52,7 @@ class TabletFirstView extends StatelessWidget {
                             .copyWith(fontSize: (size.width > 520) ? 36 : 25),
                       ),
                     ),
-                    Constants.sizedBox(height: 15),
+                    const SizedBox(height: 15),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -90,7 +89,7 @@ class TabletFirstView extends StatelessWidget {
                         )
                       ],
                     ),
-                    Constants.sizedBox(height: 15),
+                    const SizedBox(height: 15),
                     SizedBox(
                       width: size.width * 0.5,
                       child: FadeInUp(
@@ -104,7 +103,7 @@ class TabletFirstView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Constants.sizedBox(height: 22),
+                    const SizedBox(height: 22),
                     Row(
                       children: [
                         FadeIn(
@@ -117,7 +116,7 @@ class TabletFirstView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        Constants.sizedBox(width: 12),
+                        const SizedBox(width: 12),
                         FadeIn(
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5200),
@@ -128,7 +127,7 @@ class TabletFirstView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        Constants.sizedBox(width: 12),
+                        const SizedBox(width: 12),
                         FadeIn(
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5800),
@@ -139,7 +138,7 @@ class TabletFirstView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        Constants.sizedBox(width: 12),
+                        const SizedBox(width: 12),
                         FadeIn(
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 6300),
@@ -152,7 +151,7 @@ class TabletFirstView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Constants.sizedBox(height: 18),
+                    const SizedBox(height: 18),
                     FadeInUp(
                       duration: const Duration(milliseconds: 1500),
                       delay: const Duration(milliseconds: 6800),
@@ -162,7 +161,7 @@ class TabletFirstView extends StatelessWidget {
                     ),
                   ],
                 ),
-                Constants.sizedBox(width: 20),
+                const SizedBox(width: 20),
               ],
             ),
           ],

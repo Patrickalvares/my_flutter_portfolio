@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
 
 class MyPortfolio extends StatefulWidget {
   const MyPortfolio({super.key});
@@ -57,7 +56,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                   ]),
             ),
           ),
-          Constants.sizedBox(height: 40),
+          const SizedBox(height: 40),
           GridView.builder(
             itemCount: images.length,
             shrinkWrap: true,
@@ -123,14 +122,14 @@ class _MyPortfolioState extends State<MyPortfolio> {
                                         color: Colors.black87)
                                     .copyWith(fontSize: 20),
                               ),
-                              Constants.sizedBox(height: 15),
+                              const SizedBox(height: 15),
                               Text(
                                 'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha ',
                                 style: AppTextStyles.normalStyle()
                                     .copyWith(fontSize: 20),
                                 textAlign: TextAlign.center,
                               ),
-                              Constants.sizedBox(height: 30),
+                              const SizedBox(height: 30),
                               CircleAvatar(
                                 maxRadius: 25,
                                 backgroundColor: Colors.white,

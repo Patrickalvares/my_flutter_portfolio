@@ -4,7 +4,6 @@ import 'package:my_flutter_portfolio/components/animated_container.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-import 'package:my_flutter_portfolio/globals/constants.dart';
 
 class TabletMyServices extends StatefulWidget {
   const TabletMyServices({super.key});
@@ -23,7 +22,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: size.height,
+      height: size.height * 1.5,
       color: AppColors.backgroundColor,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 12),
@@ -49,7 +48,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
                   ]),
             ),
           ),
-          Constants.sizedBox(height: 60),
+          const SizedBox(height: 60),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -66,7 +65,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
                         imageAsset: AppAssets.code,
                         title: 'Desenvolvimento de Aplicativos'),
                   ),
-                  Constants.sizedBox(width: 18),
+                  const SizedBox(width: 18),
                   InkWell(
                     onTap: () {},
                     onHover: (value) => setState(() {
@@ -77,7 +76,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
                         imageAsset: AppAssets.brush,
                         title: 'UX/UI'),
                   ),
-                  Constants.sizedBox(width: 18),
+                  const SizedBox(width: 18),
                 ],
               ),
               InkWell(
