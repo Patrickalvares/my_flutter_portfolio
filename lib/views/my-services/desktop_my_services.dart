@@ -6,14 +6,14 @@ import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
 
-class MyServices extends StatefulWidget {
-  const MyServices({super.key});
+class DesktopMyServices extends StatefulWidget {
+  const DesktopMyServices({super.key});
 
   @override
-  State<MyServices> createState() => _MyServicesState();
+  State<DesktopMyServices> createState() => _DesktopMyServicesState();
 }
 
-class _MyServicesState extends State<MyServices> {
+class _DesktopMyServicesState extends State<DesktopMyServices> {
   bool isContainerOneHover = false;
   bool isContainerTwoHover = false;
   bool isContainerThreeHover = false;

@@ -5,10 +5,10 @@ import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:my_flutter_portfolio/globals/constants.dart';
 
-import '../components/animated_button.dart';
+import '../../components/animated_button.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+class DesktopAboutMe extends StatelessWidget {
+  const DesktopAboutMe({super.key});
 
   @override
   Widget build(BuildContext context) {

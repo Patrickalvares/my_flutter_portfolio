@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import '../globals/constants.dart';
-import 'about_me.dart';
+import 'about-me/about_me.dart';
 import 'first-view/first_view.dart';
 import 'my_portfolio.dart';
-import 'my_services.dart';
+import 'my-services/my_services.dart';
 
 class MainDashBoard extends StatefulWidget {
   const MainDashBoard({super.key});
