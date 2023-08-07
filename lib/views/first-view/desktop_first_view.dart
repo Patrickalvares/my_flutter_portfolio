@@ -98,17 +98,6 @@ class DesktopFirstView extends StatelessWidget {
                       children: [
                         FadeIn(
                           duration: const Duration(milliseconds: 1500),
-                          delay: const Duration(milliseconds: 4700),
-                          child: SocialButton(
-                            imageAsset: AppAssets.facebook,
-                            imageWidth: 24,
-                            imageHeight: 20,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        FadeIn(
-                          duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5200),
                           child: SocialButton(
                             imageAsset: AppAssets.linkedin,
@@ -139,15 +128,15 @@ class DesktopFirstView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
+                        const SizedBox(width: 24),
+                        FadeInUp(
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 6800),
+                          child: const AnimatedButton(
+                            buttonName: 'Download do Currículo',
+                          ),
+                        ),
                       ],
-                    ),
-                    const SizedBox(height: 18),
-                    FadeInUp(
-                      duration: const Duration(milliseconds: 1500),
-                      delay: const Duration(milliseconds: 6800),
-                      child: const AnimatedButton(
-                        buttonName: 'Download do Currículo',
-                      ),
                     ),
                   ],
                 ),

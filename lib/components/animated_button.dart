@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AnimatedButton extends StatefulWidget {
   final String buttonName;
@@ -40,7 +41,7 @@ class AnimatedButtonState extends State<AnimatedButton>
         return Transform.rotate(
           angle: _animation.value,
           child: MaterialButton(
-            onPressed: () {},
+            onPressed: _launchUrl,
             color: AppColors.themeColor,
             hoverColor: AppColors.hoverColor,
             elevation: 12,
@@ -58,5 +59,13 @@ class AnimatedButtonState extends State<AnimatedButton>
         );
       },
     );
+  }
+}
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(
+      Uri.parse('http://www.linkedin.com/in/patrickalvares/'))) {
+    throw Exception(
+        'Could not launch http://www.linkedin.com/in/patrickalvares/');
   }
 }

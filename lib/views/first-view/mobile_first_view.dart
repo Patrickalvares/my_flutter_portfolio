@@ -91,7 +91,7 @@ class TabletFirstView extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
                     SizedBox(
-                      width: size.width * 0.5,
+                      width: size.width * 0.9,
                       child: FadeInUp(
                         duration: const Duration(milliseconds: 1500),
                         delay: const Duration(milliseconds: 3700),
@@ -100,23 +100,13 @@ class TabletFirstView extends StatelessWidget {
                           'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
                           'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
                           style: AppTextStyles.normalStyle(),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ),
                     const SizedBox(height: 22),
                     Row(
                       children: [
-                        FadeIn(
-                          duration: const Duration(milliseconds: 1500),
-                          delay: const Duration(milliseconds: 4700),
-                          child: SocialButton(
-                            imageAsset: AppAssets.facebook,
-                            imageWidth: 24,
-                            imageHeight: 20,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(width: 12),
                         FadeIn(
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5200),
@@ -151,7 +141,7 @@ class TabletFirstView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 18),
+                    const SizedBox(height: 20),
                     FadeInUp(
                       duration: const Duration(milliseconds: 1500),
                       delay: const Duration(milliseconds: 6800),
