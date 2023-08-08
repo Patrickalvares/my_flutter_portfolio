@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height = 90.0;
-
-  const DesktopAppBar({Key? key}) : super(key: key);
+  final Function(int) onItemTap;
+  final AutoScrollController controller;
+  const DesktopAppBar(
+      {Key? key, required this.controller, required this.onItemTap})
+      : super(key: key);
 
   @override
   Size get preferredSize => Size.fromHeight(height);
@@ -44,29 +48,38 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             AppBarHoverText(
-              text: 'Início',
+              onTap: () => onItemTap(0),
               style: AppTextStyles.headerTextStyle(),
+              text: 'Início',
             ),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                text: 'Sobre Mim', style: AppTextStyles.headerTextStyle()),
+                onTap: () => onItemTap(1),
+                text: 'Sobre Mim',
+                style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                text: 'Serviços', style: AppTextStyles.headerTextStyle()),
+                onTap: () => onItemTap(2),
+                text: 'Serviços',
+                style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                text: 'Portfólio', style: AppTextStyles.headerTextStyle()),
+                onTap: () => onItemTap(3),
+                text: 'Portfólio',
+                style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                text: 'Contacte-me', style: AppTextStyles.headerTextStyle()),
+                onTap: () => onItemTap(4),
+                text: 'Contacte-me',
+                style: AppTextStyles.headerTextStyle()),
             const Spacer(),
           ]),
         ),
@@ -234,9 +247,7 @@ class AppBarHoverTextState extends State<AppBarHoverText> {
           child: GestureDetector(
             onTap: widget.onTap,
             child: Transform.scale(
-              scale: isHovering
-                  ? 1.1
-                  : 1.0, // Ajuste o fator de escala conforme necessário
+              scale: isHovering ? 1.1 : 1.0,
               child: Text(
                 widget.text,
                 style: widget.style?.copyWith(
