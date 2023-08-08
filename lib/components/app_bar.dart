@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/globals/app_colors.dart';
-import 'package:my_flutter_portfolio/globals/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_colors.dart';
+import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 
 class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height = 90.0;
@@ -43,23 +43,30 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
             const SizedBox(
               width: 40,
             ),
-            Text('Início', style: AppTextStyles.headerTextStyle()),
+            AppBarHoverText(
+              text: 'Início',
+              style: AppTextStyles.headerTextStyle(),
+            ),
             const SizedBox(
               width: 40,
             ),
-            Text('Sobre Mim', style: AppTextStyles.headerTextStyle()),
+            AppBarHoverText(
+                text: 'Sobre Mim', style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
-            Text('Serviços', style: AppTextStyles.headerTextStyle()),
+            AppBarHoverText(
+                text: 'Serviços', style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
-            Text('Portfólio', style: AppTextStyles.headerTextStyle()),
+            AppBarHoverText(
+                text: 'Portfólio', style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
-            Text('Contacte-me', style: AppTextStyles.headerTextStyle()),
+            AppBarHoverText(
+                text: 'Contacte-me', style: AppTextStyles.headerTextStyle()),
             const Spacer(),
           ]),
         ),
@@ -197,6 +204,53 @@ class CustomDrawerState extends State<CustomDrawer> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class AppBarHoverText extends StatefulWidget {
+  final String text;
+  final TextStyle? style;
+  final VoidCallback? onTap;
+
+  const AppBarHoverText(
+      {super.key, required this.text, this.style, this.onTap});
+
+  @override
+  AppBarHoverTextState createState() => AppBarHoverTextState();
+}
+
+class AppBarHoverTextState extends State<AppBarHoverText> {
+  final ValueNotifier<bool> _isHovering = ValueNotifier<bool>(false);
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder(
+      valueListenable: _isHovering,
+      builder: (BuildContext context, bool isHovering, Widget? child) {
+        return MouseRegion(
+          onEnter: (_) => _isHovering.value = true,
+          onExit: (_) => _isHovering.value = false,
+          child: GestureDetector(
+            onTap: widget.onTap,
+            child: Transform.scale(
+              scale: isHovering
+                  ? 1.1
+                  : 1.0, // Ajuste o fator de escala conforme necessário
+              child: Text(
+                widget.text,
+                style: widget.style?.copyWith(
+                  decoration: isHovering ? TextDecoration.underline : null,
+                  decorationColor: isHovering ? AppColors.hoverColor : null,
+                  decorationThickness: isHovering ? 3.0 : null,
+                  color:
+                      isHovering ? AppColors.hoverColor : widget.style?.color,
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

@@ -1,19 +1,17 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/globals/app_assets.dart';
-import 'package:my_flutter_portfolio/globals/app_colors.dart';
-import 'package:my_flutter_portfolio/globals/app_text_style.dart';
-
-import '../../components/animated_button.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
+import 'package:my_flutter_portfolio/constants/app_colors.dart';
+import 'package:my_flutter_portfolio/constants/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_texts.dart';
 
 class MobileAboutMe extends StatelessWidget {
   const MobileAboutMe({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height,
+      height: 1150,
       color: AppColors.backgroundColor2,
       alignment: Alignment.center,
       child: Column(
@@ -62,22 +60,18 @@ class MobileAboutMe extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 6),
-                      FadeInLeft(
-                        duration: const Duration(milliseconds: 1600),
-                        child: Text(
-                          'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
-                          'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
-                          'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
-                          style: AppTextStyles.normalStyle(),
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 12),
+                        child: FadeInLeft(
+                            duration: const Duration(milliseconds: 1600),
+                            child: AppTexts.aboutMeText),
                       ),
                       const SizedBox(height: 15),
-                      FadeInUp(
-                        duration: const Duration(milliseconds: 1500),
-                        delay: const Duration(milliseconds: 6800),
-                        child: const AnimatedButton(
-                          buttonName: 'Leia Mais',
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: FadeInLeft(
+                            duration: const Duration(milliseconds: 1600),
+                            child: AppTexts.stacks),
                       ),
                     ],
                   ),

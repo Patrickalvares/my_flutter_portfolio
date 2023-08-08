@@ -10,5 +10,5 @@ class AppAssets {
   static String work1 = 'lib/assets/images/work1.jpg';
   static String work2 = 'lib/assets/images/work2.jpg';
   static String share = 'lib/assets/images/share.png';
-  static String Alura = 'lib/assets/images/alura.png';
+  static String alura = 'lib/assets/images/alura.png';
 }

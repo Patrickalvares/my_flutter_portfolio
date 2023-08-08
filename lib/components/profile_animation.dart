@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/globals/app_assets.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
 
 class ProfileAnimation extends StatefulWidget {
   final Size size;

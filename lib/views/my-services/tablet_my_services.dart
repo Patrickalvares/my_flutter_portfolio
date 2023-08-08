@@ -1,9 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/animated_container.dart';
-import 'package:my_flutter_portfolio/globals/app_assets.dart';
-import 'package:my_flutter_portfolio/globals/app_colors.dart';
-import 'package:my_flutter_portfolio/globals/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
+import 'package:my_flutter_portfolio/constants/app_colors.dart';
+import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 
 class TabletMyServices extends StatefulWidget {
   const TabletMyServices({super.key});
@@ -79,7 +79,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
                   const SizedBox(width: 18),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               InkWell(
                 onTap: () {},
                 onHover: (value) => setState(() {

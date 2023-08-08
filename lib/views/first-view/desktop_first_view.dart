@@ -1,12 +1,12 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/animated_button.dart';
 import 'package:my_flutter_portfolio/components/profile_animation.dart';
 import 'package:my_flutter_portfolio/components/social_button.dart';
-import 'package:my_flutter_portfolio/globals/app_assets.dart';
-import 'package:my_flutter_portfolio/globals/app_external_links.dart';
-import 'package:my_flutter_portfolio/globals/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
+import 'package:my_flutter_portfolio/constants/app_external_links.dart';
+import 'package:my_flutter_portfolio/constants/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_texts.dart';
 
 class DesktopFirstView extends StatelessWidget {
   const DesktopFirstView({super.key});
@@ -48,52 +48,16 @@ class DesktopFirstView extends StatelessWidget {
                   const SizedBox(height: 15),
                   Row(
                     children: [
-                      FadeInLeft(
-                        duration: const Duration(milliseconds: 1500),
-                        delay: const Duration(milliseconds: 2700),
-                        child: AnimatedTextKit(
-                          repeatForever: true,
-                          animatedTexts: [
-                            TyperAnimatedText('Desenvolvedor Mobile',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.yellow)),
-                            TyperAnimatedText('Desenvolvedor Flutter',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: const Color.fromARGB(
-                                        255, 32, 154, 255))),
-                            TyperAnimatedText('Estudante de Eng. de Software',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.orange)),
-                            TyperAnimatedText('Amante da Tecnologia',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.red)),
-                            TyperAnimatedText('Aluno Dedicado',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.purple)),
-                            TyperAnimatedText('Futuro Tech Leader',
-                                textStyle: AppTextStyles.montseratStyle(
-                                    color: Colors.green)),
-                          ],
-                          pause: const Duration(milliseconds: 1000),
-                          stopPauseOnTap: true,
-                          displayFullTextOnTap: true,
-                        ),
-                      )
+                      AppTexts.rollingTitles,
                     ],
                   ),
                   const SizedBox(height: 15),
                   SizedBox(
                     width: size.width * 0.5,
                     child: FadeInUp(
-                      duration: const Duration(milliseconds: 1500),
-                      delay: const Duration(milliseconds: 3700),
-                      child: Text(
-                        'ouiashdoashdaoisdjhasdhcjna jha jao haoiushsdoih aoasij aoihdjaoidyhiouweha '
-                        'io aiohdo ashj oaishdoaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
-                        'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpwi',
-                        style: AppTextStyles.normalStyle(),
-                      ),
-                    ),
+                        duration: const Duration(milliseconds: 1500),
+                        delay: const Duration(milliseconds: 3700),
+                        child: AppTexts.introText),
                   ),
                   const SizedBox(height: 22),
                   Row(
@@ -127,7 +91,7 @@ class DesktopFirstView extends StatelessWidget {
                         delay: const Duration(milliseconds: 6300),
                         child: SocialButton(
                           externalLink: AppLinks.alura,
-                          imageAsset: AppAssets.Alura,
+                          imageAsset: AppAssets.alura,
                           imageWidth: 24,
                           imageHeight: 24,
                           color: Colors.white,

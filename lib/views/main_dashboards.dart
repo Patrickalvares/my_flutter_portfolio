@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
-import 'package:my_flutter_portfolio/globals/app_colors.dart';
+import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'about-me/about_me.dart';
 import 'first-view/first_view.dart';
 import 'my_portfolio.dart';
