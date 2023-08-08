@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/globals/app_colors.dart';
+import 'package:my_flutter_portfolio/globals/app_external_links.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,7 +42,7 @@ class AnimatedButtonState extends State<AnimatedButton>
         return Transform.rotate(
           angle: _animation.value,
           child: MaterialButton(
-            onPressed: _launchUrl,
+            onPressed: _launchCV,
             color: AppColors.themeColor,
             hoverColor: AppColors.hoverColor,
             elevation: 12,
@@ -62,10 +63,10 @@ class AnimatedButtonState extends State<AnimatedButton>
   }
 }
 
-Future<void> _launchUrl() async {
-  if (!await launchUrl(
-      Uri.parse('http://www.linkedin.com/in/patrickalvares/'))) {
-    throw Exception(
-        'Could not launch http://www.linkedin.com/in/patrickalvares/');
+Future<void> _launchCV() async {
+  if (!await launchUrl(AppLinks.cvView)) {
+    throw Exception('Could not launch ${AppLinks.cvView}');
+  } else if (!await launchUrl(AppLinks.cvDownload)) {
+    throw Exception('Could not launch ${AppLinks.cvDownload}');
   }
 }

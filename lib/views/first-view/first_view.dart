@@ -17,9 +17,9 @@ class _FirstViewState extends State<FirstView> {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (size.width > 970) {
-          return DesktopFirstView();
+          return const DesktopFirstView();
         } else {
-          return TabletFirstView();
+          return const TabletFirstView();
         }
       },
     );

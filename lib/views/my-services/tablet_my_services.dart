@@ -22,7 +22,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: size.height * 1.5,
+      height: 1120,
       color: AppColors.backgroundColor,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 12),
@@ -79,6 +79,7 @@ class _TabletMyServicesState extends State<TabletMyServices> {
                   const SizedBox(width: 18),
                 ],
               ),
+              SizedBox(height: 20),
               InkWell(
                 onTap: () {},
                 onHover: (value) => setState(() {

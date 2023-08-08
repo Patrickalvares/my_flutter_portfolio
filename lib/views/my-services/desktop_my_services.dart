@@ -22,7 +22,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: size.height,
+      height: 670,
       color: AppColors.backgroundColor,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 12),

@@ -16,6 +16,8 @@ class MainDashBoard extends StatefulWidget {
 class _MainDashBoardState extends State<MainDashBoard> {
   @override
   Widget build(BuildContext context) {
+    final ScrollController _controller = ScrollController();
+
     final Size size = MediaQuery.of(context).size;
     bool printDrawer = false;
 
@@ -32,20 +34,33 @@ class _MainDashBoardState extends State<MainDashBoard> {
       backgroundColor: AppColors.backgroundColor,
       appBar: appBar,
       drawer: printDrawer ? const CustomDrawer() : null,
-      body: SingleChildScrollView(
-        padding: EdgeInsets.only(
-            top: (size.width > 970) ? size.height * 0.2 : size.height * 0.01,
-            left: size.height * 0.0,
-            right: size.height * 0.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const FirstView(),
-            const SizedBox(height: 220),
-            const AboutMe(),
-            const MyServices(),
-            const MyPortfolio(),
-          ],
+      body: ScrollbarTheme(
+        data: ScrollbarThemeData(
+          thumbColor: MaterialStateProperty.all(AppColors.hoverColor),
+          trackColor: MaterialStateProperty.all(AppColors.themeColor),
+        ),
+        child: Scrollbar(
+          controller: _controller,
+          trackVisibility: true,
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            controller: _controller,
+            padding: EdgeInsets.only(
+                top:
+                    (size.width > 970) ? size.height * 0.2 : size.height * 0.01,
+                left: size.height * 0.0,
+                right: size.height * 0.0),
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FirstView(),
+                SizedBox(height: 220),
+                AboutMe(),
+                MyServices(),
+                MyPortfolio(),
+              ],
+            ),
+          ),
         ),
       ),
     );

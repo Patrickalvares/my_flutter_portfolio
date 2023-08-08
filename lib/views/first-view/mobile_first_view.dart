@@ -5,6 +5,7 @@ import 'package:my_flutter_portfolio/components/animated_button.dart';
 import 'package:my_flutter_portfolio/components/profile_animation.dart';
 import 'package:my_flutter_portfolio/components/social_button.dart';
 import 'package:my_flutter_portfolio/globals/app_assets.dart';
+import 'package:my_flutter_portfolio/globals/app_external_links.dart';
 import 'package:my_flutter_portfolio/globals/app_text_style.dart';
 
 class TabletFirstView extends StatelessWidget {
@@ -111,9 +112,10 @@ class TabletFirstView extends StatelessWidget {
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5200),
                           child: SocialButton(
+                            externalLink: AppLinks.linkedin,
                             imageAsset: AppAssets.linkedin,
-                            imageWidth: 24,
-                            imageHeight: 20,
+                            imageWidth: 26,
+                            imageHeight: 26,
                             color: Colors.white,
                           ),
                         ),
@@ -122,9 +124,10 @@ class TabletFirstView extends StatelessWidget {
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 5800),
                           child: SocialButton(
+                            externalLink: AppLinks.github,
                             imageAsset: AppAssets.github,
-                            imageWidth: 24,
-                            imageHeight: 20,
+                            imageWidth: 26,
+                            imageHeight: 26,
                             color: Colors.white,
                           ),
                         ),
@@ -133,9 +136,22 @@ class TabletFirstView extends StatelessWidget {
                           duration: const Duration(milliseconds: 1500),
                           delay: const Duration(milliseconds: 6300),
                           child: SocialButton(
-                            imageAsset: AppAssets.instagram,
+                            externalLink: AppLinks.alura,
+                            imageAsset: AppAssets.Alura,
                             imageWidth: 24,
-                            imageHeight: 20,
+                            imageHeight: 24,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        FadeIn(
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 6800),
+                          child: SocialButton(
+                            externalLink: AppLinks.whatsapp,
+                            imageAsset: AppAssets.whatsapp,
+                            imageWidth: 24,
+                            imageHeight: 24,
                             color: Colors.white,
                           ),
                         ),
@@ -144,7 +160,7 @@ class TabletFirstView extends StatelessWidget {
                     const SizedBox(height: 20),
                     FadeInUp(
                       duration: const Duration(milliseconds: 1500),
-                      delay: const Duration(milliseconds: 6800),
+                      delay: const Duration(milliseconds: 7300),
                       child: const AnimatedButton(
                         buttonName: 'Download do Currículo',
                       ),
