@@ -48,7 +48,7 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             AppBarHoverText(
-              onTap: () => onItemTap(0),
+              onTap: () => onItemTap(1),
               style: AppTextStyles.headerTextStyle(),
               text: 'Início',
             ),
@@ -56,29 +56,22 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(1),
+                onTap: () => onItemTap(2),
                 text: 'Sobre Mim',
                 style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(2),
+                onTap: () => onItemTap(3),
                 text: 'Serviços',
                 style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(3),
-                text: 'Portfólio',
-                style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            AppBarHoverText(
                 onTap: () => onItemTap(4),
-                text: 'Contacte-me',
+                text: 'Portfólio',
                 style: AppTextStyles.headerTextStyle()),
             const Spacer(),
           ]),
@@ -134,7 +127,11 @@ class NonDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
 }
 
 class CustomDrawer extends StatefulWidget {
-  const CustomDrawer({Key? key}) : super(key: key);
+  final Function(int) onItemTap;
+  final AutoScrollController controller;
+  const CustomDrawer(
+      {Key? key, required this.onItemTap, required this.controller})
+      : super(key: key);
 
   @override
   CustomDrawerState createState() => CustomDrawerState();
@@ -161,60 +158,45 @@ class CustomDrawerState extends State<CustomDrawer> {
             ),
           ),
           ListTile(
-            leading: const Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            title: Text('Início', style: AppTextStyles.headerTextStyle()),
-            onTap: () {
-              // Implement navigation to the respective page here.
-              // Navigator.of(context).pushReplacementNamed("/home");
-            },
-          ),
+              leading: const Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              title: Text('Início', style: AppTextStyles.headerTextStyle()),
+              onTap: () {
+                widget.onItemTap(1);
+                Navigator.pop(context);
+              }),
           ListTile(
-            leading: const Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-            title: Text('Sobre Mim', style: AppTextStyles.headerTextStyle()),
-            onTap: () {
-              // Implement navigation to the respective page here.
-              // Navigator.of(context).pushReplacementNamed("/about");
-            },
-          ),
+              leading: const Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+              title: Text('Sobre Mim', style: AppTextStyles.headerTextStyle()),
+              onTap: () {
+                widget.onItemTap(2);
+                Navigator.pop(context);
+              }),
           ListTile(
-            leading: const Icon(
-              Icons.build,
-              color: Colors.white,
-            ),
-            title: Text('Serviços', style: AppTextStyles.headerTextStyle()),
-            onTap: () {
-              // Implement navigation to the respective page here.
-              // Navigator.of(context).pushReplacementNamed("/services");
-            },
-          ),
+              leading: const Icon(
+                Icons.build,
+                color: Colors.white,
+              ),
+              title: Text('Serviços', style: AppTextStyles.headerTextStyle()),
+              onTap: () {
+                widget.onItemTap(3);
+                Navigator.pop(context);
+              }),
           ListTile(
-            leading: const Icon(
-              Icons.folder,
-              color: Colors.white,
-            ),
-            title: Text('Portfólio', style: AppTextStyles.headerTextStyle()),
-            onTap: () {
-              // Implement navigation to the respective page here.
-              // Navigator.of(context).pushReplacementNamed("/portfolio");
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.contact_mail,
-              color: Colors.white,
-            ),
-            title: Text('Contacte-me', style: AppTextStyles.headerTextStyle()),
-            onTap: () {
-              // Implement navigation to the respective page here.
-              // Navigator.of(context).pushReplacementNamed("/contact");
-            },
-          ),
+              leading: const Icon(
+                Icons.folder,
+                color: Colors.white,
+              ),
+              title: Text('Portfólio', style: AppTextStyles.headerTextStyle()),
+              onTap: () {
+                widget.onItemTap(4);
+                Navigator.pop(context);
+              }),
         ],
       ),
     );

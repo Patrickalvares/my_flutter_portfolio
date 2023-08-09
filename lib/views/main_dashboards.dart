@@ -15,10 +15,10 @@ class MainDashBoard extends StatefulWidget {
 }
 
 class _MainDashBoardState extends State<MainDashBoard> {
+  final AutoScrollController _controller = AutoScrollController();
+
   @override
   Widget build(BuildContext context) {
-    final AutoScrollController _controller = AutoScrollController();
-
     final Size size = MediaQuery.of(context).size;
     bool printDrawer = false;
 
@@ -36,7 +36,12 @@ class _MainDashBoardState extends State<MainDashBoard> {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: appBar,
-      drawer: printDrawer ? const CustomDrawer() : null,
+      drawer: printDrawer
+          ? CustomDrawer(
+              controller: _controller,
+              onItemTap: (index) => scrollToSection(_controller, index),
+            )
+          : null,
       body: ScrollbarTheme(
         data: ScrollbarThemeData(
           thumbColor: MaterialStateProperty.all(AppColors.hoverColor),
@@ -48,24 +53,15 @@ class _MainDashBoardState extends State<MainDashBoard> {
           thumbVisibility: true,
           child: SingleChildScrollView(
             controller: _controller,
-            padding: EdgeInsets.only(
-                top:
-                    (size.width > 970) ? size.height * 0.2 : size.height * 0.01,
-                left: size.height * 0.0,
-                right: size.height * 0.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AutoScrollTag(
-                    index: 0,
-                    key: const ValueKey(0),
-                    controller: _controller,
-                    child: const FirstView()),
-                AutoScrollTag(
                     index: 1,
                     key: const ValueKey(1),
                     controller: _controller,
-                    child: const SizedBox(height: 220)),
+                    child: const FirstView()),
+                const SizedBox(height: 220),
                 AutoScrollTag(
                     index: 2,
                     key: const ValueKey(2),
@@ -90,6 +86,10 @@ class _MainDashBoardState extends State<MainDashBoard> {
   }
 
   void scrollToSection(AutoScrollController controller, int index) async {
+    if (index == 0 && controller.hasClients) {
+      await controller.animateTo(1.0,
+          duration: const Duration(milliseconds: 1), curve: Curves.easeInOut);
+    }
     await controller.scrollToIndex(index,
         preferPosition: AutoScrollPosition.begin);
     controller.highlight(index);
