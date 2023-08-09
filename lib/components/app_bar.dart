@@ -3,8 +3,7 @@ import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final double height = 90.0;
+class DesktopAppBar extends StatefulWidget implements PreferredSizeWidget {
   final Function(int) onItemTap;
   final AutoScrollController controller;
   const DesktopAppBar(
@@ -12,12 +11,17 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
       : super(key: key);
 
   @override
-  Size get preferredSize => Size.fromHeight(height);
+  State<DesktopAppBar> createState() => _DesktopAppBarState();
+  @override
+  Size get preferredSize => const Size.fromHeight(90.0);
+}
 
+class _DesktopAppBarState extends State<DesktopAppBar> {
+  @override
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
-      preferredSize: preferredSize,
+      preferredSize: const Size.fromHeight(90.0),
       child: AppBar(
         backgroundColor: AppColors.backgroundColor,
         toolbarHeight: 90,
@@ -48,7 +52,7 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             AppBarHoverText(
-              onTap: () => onItemTap(1),
+              onTap: () => widget.onItemTap(1),
               style: AppTextStyles.headerTextStyle(),
               text: 'Início',
             ),
@@ -56,21 +60,21 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(2),
+                onTap: () => widget.onItemTap(2),
                 text: 'Sobre Mim',
                 style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(3),
+                onTap: () => widget.onItemTap(3),
                 text: 'Serviços',
                 style: AppTextStyles.headerTextStyle()),
             const SizedBox(
               width: 40,
             ),
             AppBarHoverText(
-                onTap: () => onItemTap(4),
+                onTap: () => widget.onItemTap(4),
                 text: 'Portfólio',
                 style: AppTextStyles.headerTextStyle()),
             const Spacer(),

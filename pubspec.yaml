@@ -42,6 +42,11 @@ dependencies:
   flutter_svg: ^2.0.7
   clipboard: ^0.1.3
   scroll_to_index: ^3.0.1
+  youtube_player_iframe: ^4.0.4
+  html: ^0.15.4
+  webview_flutter: ^4.2.2
+ 
+
 
 dev_dependencies:
   flutter_test:

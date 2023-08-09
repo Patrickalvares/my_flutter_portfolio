@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/remediando.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'about-me/about_me.dart';
 import 'first-view/first_view.dart';
-import 'my_portfolio.dart';
+import 'my-portfolio/my_portfolio.dart';
 import 'my-services/my_services.dart';
 
 class MainDashBoard extends StatefulWidget {
@@ -76,7 +77,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
                     index: 4,
                     key: const ValueKey(4),
                     controller: _controller,
-                    child: const MyPortfolio()),
+                    child: Remediando()),
               ],
             ),
           ),
