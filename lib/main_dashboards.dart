@@ -3,10 +3,10 @@ import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/remediando.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'about-me/about_me.dart';
-import 'first-view/first_view.dart';
-import 'my-portfolio/my_portfolio.dart';
-import 'my-services/my_services.dart';
+import 'views/about-me/about_me.dart';
+import 'views/first-view/first_view.dart';
+import 'views/my-portfolio/my_portfolio.dart';
+import 'views/my-services/my_services.dart';
 
 class MainDashBoard extends StatefulWidget {
   const MainDashBoard({super.key});

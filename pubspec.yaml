@@ -45,6 +45,7 @@ dependencies:
   youtube_player_iframe: ^4.0.4
   html: ^0.15.4
   webview_flutter: ^4.2.2
+  animated_splash_screen: ^1.3.0
  
 
 
