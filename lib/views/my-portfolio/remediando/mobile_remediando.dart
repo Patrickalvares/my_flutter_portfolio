@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/regular_github_button.dart';
+import 'package:my_flutter_portfolio/components/youtubeFrame.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_external_links.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 import 'package:my_flutter_portfolio/constants/app_texts.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-class DesktopRemediando extends StatelessWidget {
-  DesktopRemediando({Key? key}) : super(key: key);
-
-  final _controller = YoutubePlayerController.fromVideoId(
-    videoId: 'Zznm4VTGW0Y',
-    autoPlay: false,
-    params: const YoutubePlayerParams(showFullscreenButton: true),
-  );
+class MobileRemediando extends StatelessWidget {
+  const MobileRemediando({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +15,10 @@ class DesktopRemediando extends StatelessWidget {
     return Expanded(
       child: Container(
         width: size.width,
-        height: (size.width > 900) ? 700 : 1000,
+        height: 1400,
         alignment: Alignment.center,
         padding:
-            EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),
+            EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.03),
         decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -69,35 +63,23 @@ class DesktopRemediando extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 482.50,
-                      width: 225.00,
-                      child: YoutubePlayer(
-                        controller: _controller,
-                        aspectRatio: 19.3 / 9,
-                      ),
-                    ),
-                    Expanded(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 20, right: 20, bottom: 20),
-                              child: RemediandoText(
-                                      fontTextSize:
-                                          (size.width > 1210) ? 20 : 15)
-                                  .remediandoInfo,
-                            ),
-                            RegularGithubButton(link: AppLinks.remediandoLink),
-                          ]),
-                    )
-                  ],
+                SimpleHtmlYoutubeIframe(
+                  key: key,
+                  youtubeCode: 'Zznm4VTGW0Y',
+                ),
+                Expanded(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, right: 10, bottom: 10),
+                          child:
+                              RemediandoText(fontTextSize: 15).remediandoInfo,
+                        ),
+                        RegularGithubButton(link: AppLinks.remediandoLink),
+                      ]),
                 ),
               ],
             ),

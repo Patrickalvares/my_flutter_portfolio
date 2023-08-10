@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/views/my-portfolio/desktop_remediando.dart';
-import 'mobile_remediando.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/desktop_provider_mockups.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/mobile_provider_mockups.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/remediando/desktop_remediando.dart';
+import 'remediando/mobile_remediando.dart';
 
 class MyPortfolio extends StatefulWidget {
   const MyPortfolio({super.key});
@@ -19,9 +21,18 @@ class _MyPortfolioState extends State<MyPortfolio> {
         LayoutBuilder(
           builder: (context, constraints) {
             if (size.width > 810) {
-              return DesktopRemediando();
+              return const DesktopRemediando();
             } else {
-              return MobileRemediando();
+              return const MobileRemediando();
+            }
+          },
+        ),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            if (size.width > 810) {
+              return const DesktopProviderMockups();
+            } else {
+              return const MobileProviderMockups();
             }
           },
         ),

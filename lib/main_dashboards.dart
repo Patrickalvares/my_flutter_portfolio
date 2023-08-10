@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
-import 'package:my_flutter_portfolio/views/my-portfolio/desktop_remediando.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'views/about-me/about_me.dart';
 import 'views/first-view/first_view.dart';

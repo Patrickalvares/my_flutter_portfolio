@@ -6,6 +6,7 @@ import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 class InfoAnimatedConatiner extends StatefulWidget {
   final String title;
   final String imageAsset;
+  final Text serviceText;
   bool hover;
 
   InfoAnimatedConatiner({
@@ -13,6 +14,7 @@ class InfoAnimatedConatiner extends StatefulWidget {
     required this.title,
     required this.imageAsset,
     required this.hover,
+    required this.serviceText,
   });
 
   @override
@@ -31,7 +33,7 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
         height: widget.hover ? 450 : 435,
         alignment: Alignment.center,
         transform: widget.hover ? onHoverActive : onHoverRemove,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           border: widget.hover
@@ -68,16 +70,8 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
                   .copyWith(fontStyle: widget.hover ? FontStyle.italic : null),
             ),
             const SizedBox(height: 12),
-            Text(
-              'oaiushdaousyd aos aoisyudaoisjd ioasudhf apjfd osidjfh '
-              'oisudfh posiduf opsidhjfsopiidfhopisuqwpie opqpuqw poiqwu qpiw uqpw uqpw',
-              style: AppTextStyles.normalStyle(),
-              textAlign: TextAlign.center,
-            ),
+            widget.serviceText,
             const SizedBox(height: 12),
-            const AnimatedButton(
-              buttonName: 'Leia mais',
-            )
           ],
         ),
       ),

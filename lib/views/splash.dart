@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/main_dashboards.dart';
 import 'package:page_transition/page_transition.dart';
@@ -18,10 +19,11 @@ class _SplashScreenState extends State<SplashScreen> {
       AnimatedSplashScreen(
         duration: 1,
         backgroundColor: AppColors.backgroundColor,
-        splash: 'lib/assets/images/dash.png',
+        splash: AppAssets.construction,
+        splashIconSize: 300,
         nextScreen: const MainDashBoard(),
         splashTransition: SplashTransition.sizeTransition,
-        animationDuration: const Duration(milliseconds: 1700),
+        animationDuration: const Duration(milliseconds: 3000),
         pageTransitionType: PageTransitionType.rightToLeftWithFade,
       ),
     ]);

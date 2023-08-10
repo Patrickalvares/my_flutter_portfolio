@@ -4,6 +4,7 @@ import 'package:my_flutter_portfolio/components/animated_container.dart';
 import 'package:my_flutter_portfolio/constants/app_assets.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
+import 'package:my_flutter_portfolio/constants/app_texts.dart';
 
 class PhoneMyServices extends StatefulWidget {
   const PhoneMyServices({super.key});
@@ -58,6 +59,7 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   isContainerOneHover = value;
                 }),
                 child: InfoAnimatedConatiner(
+                    serviceText: AppTexts.appDeveloper,
                     hover: isContainerOneHover,
                     imageAsset: AppAssets.code,
                     title: 'Desenvolvimento de Aplicativos'),
@@ -69,6 +71,7 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   isContainerTwoHover = value;
                 }),
                 child: InfoAnimatedConatiner(
+                    serviceText: AppTexts.uxUi,
                     hover: isContainerTwoHover,
                     imageAsset: AppAssets.brush,
                     title: 'UX/UI'),
@@ -80,6 +83,7 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   isContainerThreeHover = value;
                 }),
                 child: InfoAnimatedConatiner(
+                    serviceText: AppTexts.growing,
                     hover: isContainerThreeHover,
                     imageAsset: AppAssets.graph,
                     title: 'Crescimento'),

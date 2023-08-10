@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/main_dashboards.dart';
 import 'package:my_flutter_portfolio/views/splash.dart';
 
 void main() {

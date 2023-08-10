@@ -61,6 +61,104 @@ class AppTexts {
         .copyWith(fontSize: 19, fontWeight: FontWeight.bold),
     textAlign: TextAlign.justify,
   );
+
+  static Text growing = Text(
+    'Na vanguarda da transformação digital, reconheço a importância de alinhar tecnologia com '
+    'estratégia para obter resultados tangíveis. Como graduado em Administração de Empresas e '
+    'futuro Engenheiro de Software, combino perspectivas de negócios e técnicas para impulsionar '
+    'o crescimento. ',
+    style: AppTextStyles.normalStyle(),
+    textAlign: TextAlign.justify,
+  );
+
+  static Text appDeveloper = Text(
+    'Com profunda expertise em Dart e Flutter, tenho uma vasta experiência no desenvolvimento '
+    'de soluções mobile. Meu foco é sempre na criação de aplicativos intuitivos e de alto desempenho,'
+    ' utilizando as melhores práticas e ferramentas disponíveis. Minha paixão é transformar ideias em '
+    'realidade digital, criando soluções que atendam e superem as expectativas dos usuários.',
+    style: AppTextStyles.normalStyle(),
+    textAlign: TextAlign.justify,
+  );
+
+  static Text uxUi = Text(
+    'O design de UX/UI não é apenas sobre estética, mas sim sobre criar experiências memoráveis'
+    ' e eficientes para os usuários. Com um olhar atento aos detalhes e uma abordagem centrada no '
+    'usuário, busco projetar interfaces que são não apenas agradáveis aos olhos, mas também intuitivas'
+    ' e fáceis de usar. Cada elemento é cuidadosamente considerado para garantir que os usuários tenham '
+    'uma experiência fluida e agradável.',
+    style: AppTextStyles.normalStyle(),
+    textAlign: TextAlign.justify,
+  );
+}
+
+class DesafioText extends StatelessWidget {
+  final double fontTextSize;
+
+  const DesafioText({super.key, required this.fontTextSize});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Suporte a temas claro e escuro.',
+          textAlign: TextAlign.right,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          'Uso do pacote provider para gerenciamento de estado.',
+          textAlign: TextAlign.start,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          'Modularização e componentização para reutilização e manutenção.',
+          textAlign: TextAlign.start,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          'Uso de fontes personalizadas e ativos de imagem.',
+          textAlign: TextAlign.start,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          'Animações e transições suaves entre telas.',
+          textAlign: TextAlign.start,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          'Layouts responsivos e bem pensados.',
+          textAlign: TextAlign.start,
+          style: GoogleFonts.mukta(
+            fontSize: fontTextSize,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class RemediandoText {

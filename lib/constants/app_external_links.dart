@@ -13,4 +13,6 @@ class AppLinks {
       'https://cursos.alura.com.br/user/patrickalvares/fullCertificate/ec70cc986cd943caf755500ff3fd1494');
   static var remediandoLink =
       Uri.parse('https://github.com/Patrickalvares/app_medicine_scheduler');
+  static var desafioProviderLink = Uri.parse(
+      'https://github.com/Patrickalvares/desafio_app_masterclass/tree/master');
 }

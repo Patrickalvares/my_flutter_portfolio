@@ -16,7 +16,8 @@ class DesktopAboutMe extends StatelessWidget {
       color: AppColors.backgroundColor2,
       alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 200),
+        padding: EdgeInsets.symmetric(
+            horizontal: (size.width > 1450) ? 200 : size.width * 0.06),
         child: Row(
           children: [
             Image.asset(
