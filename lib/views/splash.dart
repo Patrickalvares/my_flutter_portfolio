@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Stack(children: [
       AnimatedSplashScreen(
-        duration: 2000,
+        duration: 1,
         backgroundColor: AppColors.backgroundColor,
         splash: 'lib/assets/images/dash.png',
         nextScreen: const MainDashBoard(),

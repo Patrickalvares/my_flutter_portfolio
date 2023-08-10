@@ -6,8 +6,8 @@ import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 import 'package:my_flutter_portfolio/constants/app_texts.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-class Remediando extends StatelessWidget {
-  Remediando({Key? key}) : super(key: key);
+class DesktopRemediando extends StatelessWidget {
+  DesktopRemediando({Key? key}) : super(key: key);
 
   final _controller = YoutubePlayerController.fromVideoId(
     videoId: 'Zznm4VTGW0Y',
@@ -21,7 +21,7 @@ class Remediando extends StatelessWidget {
     return Expanded(
       child: Container(
         width: size.width,
-        height: size.height,
+        height: (size.width > 900) ? 700 : 1000,
         alignment: Alignment.center,
         padding:
             EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),
@@ -59,13 +59,23 @@ class Remediando extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
+                Text(
+                  'Remediando: App de Gerenciar Remédios',
+                  style: AppTextStyles.montseratStyle().copyWith(
+                      fontSize: 30,
+                      color: Colors.white,
+                      fontWeight: FontWeight.normal),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 579,
-                      width: 270,
+                      height: 482.50,
+                      width: 225.00,
                       child: YoutubePlayer(
                         controller: _controller,
                         aspectRatio: 19.3 / 9,
@@ -81,7 +91,7 @@ class Remediando extends StatelessWidget {
                                   left: 20, right: 20, bottom: 20),
                               child: RemediandoText(
                                       fontTextSize:
-                                          (size.width > 1020) ? 20 : 15)
+                                          (size.width > 1210) ? 20 : 15)
                                   .remediandoInfo,
                             ),
                             RegularGithubButton(link: AppLinks.remediandoLink),

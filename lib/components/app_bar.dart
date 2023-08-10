@@ -42,7 +42,7 @@ class _DesktopAppBarState extends State<DesktopAppBar> {
                       .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
                 ),
                 const Text(
-                  'Desenvolvido por mim com Flutter Web',
+                  'Desenvolvido por mim com Flutter',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 )
               ],
@@ -120,7 +120,7 @@ class NonDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
                   .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
             ),
             const Text(
-              'Desenvolvido por mim com Flutter Web',
+              'Desenvolvido por mim com Flutter',
               style: TextStyle(fontSize: 15, color: Colors.white),
             ),
           ],
