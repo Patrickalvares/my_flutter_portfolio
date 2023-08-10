@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -60,4 +61,110 @@ class AppTexts {
         .copyWith(fontSize: 19, fontWeight: FontWeight.bold),
     textAlign: TextAlign.justify,
   );
+}
+
+class RemediandoText {
+  final double fontTextSize;
+
+  RemediandoText({required this.fontTextSize});
+
+  Text get remediandoInfo {
+    return Text.rich(
+      TextSpan(
+        style: GoogleFonts.mukta(
+          fontSize: fontTextSize,
+          color: Colors.white,
+          fontWeight: FontWeight.normal,
+        ),
+        children: const <TextSpan>[
+          TextSpan(
+              text:
+                  'No desenvolvimento deste aplicativo, adotei a arquitetura '),
+          TextSpan(
+            text: 'BLoC',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text: ' para gerenciar o estado. Isso me '
+                  'permitiu separar claramente a lógica de negócios da interface '
+                  'do usuário. Além disso, integrei o aplicativo com o '),
+          TextSpan(
+            text: 'SQLite',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(text: ' usando o pacote '),
+          TextSpan(
+            text: 'sqflite',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text: ', desenvolvendo um helper de banco de dados para '
+                  'facilitar as operações de '),
+          TextSpan(
+            text: 'CRUD',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text: '. Dei especial atenção ao modelo de dados,'
+                  ' criando uma estrutura robusta para medicamentos, que reflete minha compreensão '
+                  'em '),
+          TextSpan(
+            text: 'programação orientada a objetos',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text: '. A interface do usuário foi projetada para ser '
+                  'interativa e amigável, incorporando '),
+          TextSpan(
+            text: 'animações',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text: ' e um calendário interativo para uma experiência'
+                  ' intuitiva. A modularidade foi uma prioridade, estruturando o aplicativo em componentes '
+                  'separados e arquivos específicos, o que facilita a manutenção e futuras expansões. '
+                  'Com um foco claro no gerenciamento de medicamentos, o aplicativo oferece'
+                  ' funcionalidades abrangentes, desde a visualização diária até a edição e '),
+          TextSpan(
+            text: 'notificações',
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+                decorationColor: Colors.white,
+                decorationThickness: 3.0),
+          ),
+          TextSpan(
+              text:
+                  '. Por último, mas não menos importante, a estética e o design '
+                  'desempenharam um papel crucial. Investi tempo para garantir que a aplicação'
+                  ' não fosse apenas funcional, mas também visualmente atraente.'),
+        ],
+      ),
+      textAlign: TextAlign.justify,
+    );
+  }
 }

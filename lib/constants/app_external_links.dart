@@ -11,4 +11,6 @@ class AppLinks {
       'mailto:patrickalvares@outlook.com?subject=Tenho%20uma%20oportunidade%20para%20um%20Dev.%20Flutter%20como%20voc%C3%AA!&body=Vi%20seu%20e-mail%20no%20sou%20portfolio%20e...');
   static var alura = Uri.parse(
       'https://cursos.alura.com.br/user/patrickalvares/fullCertificate/ec70cc986cd943caf755500ff3fd1494');
+  static var remediandoLink =
+      Uri.parse('https://github.com/Patrickalvares/app_medicine_scheduler');
 }
