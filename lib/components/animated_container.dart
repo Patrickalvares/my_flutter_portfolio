@@ -54,7 +54,7 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
         duration: const Duration(milliseconds: 600),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
               widget.imageAsset,

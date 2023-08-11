@@ -149,15 +149,18 @@ class CustomDrawerState extends State<CustomDrawer> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
+          SizedBox(
+            height: 80,
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: AppColors.backgroundColor2,
+              ),
+              child: const Text(
+                'Acesso Rápido',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
               ),
             ),
           ),
