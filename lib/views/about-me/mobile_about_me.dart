@@ -17,7 +17,7 @@ class MobileAboutMe extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(
-            AppAssets.myPhoto,
+            AppAssets.dev,
             height: 450,
             width: 400,
           ),

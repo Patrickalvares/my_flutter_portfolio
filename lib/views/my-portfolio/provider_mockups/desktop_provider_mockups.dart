@@ -63,19 +63,25 @@ class DesktopProviderMockups extends StatelessWidget {
                       key: key,
                       youtubeCode: 'Gl7aXzVsuvM',
                     ),
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 20, right: 20, bottom: 20),
-                              child: DesafioText(
-                                  fontTextSize: (size.width > 1210) ? 20 : 15)),
-                          Center(
-                              child: RegularGithubButton(
-                                  link: AppLinks.desafioProviderLink)),
-                        ]),
+                    SizedBox(
+                      width: size.width * 0.10,
+                    ),
+                    Expanded(
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 20, right: 20, bottom: 20),
+                                child: DesafioText(
+                                    fontTextSize:
+                                        (size.width > 1210) ? 20 : 15)),
+                            Center(
+                                child: RegularGithubButton(
+                                    link: AppLinks.desafioProviderLink)),
+                          ]),
+                    ),
                   ],
                 ),
               ],

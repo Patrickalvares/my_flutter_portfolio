@@ -15,7 +15,7 @@ class DesktopRemediando extends StatelessWidget {
     return Expanded(
       child: Container(
         width: size.width,
-        height: (size.width > 900) ? 700 : 1000,
+        height: (size.width > 1400) ? 700 : 800,
         alignment: Alignment.center,
         padding:
             EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),

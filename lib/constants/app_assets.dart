@@ -12,4 +12,9 @@ class AppAssets {
   static String share = 'lib/assets/images/share.png';
   static String alura = 'lib/assets/images/alura.png';
   static String construction = 'lib/assets/images/construcao.png';
+  static String tinderMockup = 'lib/assets/images/tinder_mockup.png';
+  static String instagramMockup = 'lib/assets/images/instagram_mockup.png';
+  static String loginMockup = 'lib/assets/images/login_mockup.png';
+  static String financeMockup = 'lib/assets/images/finance_mockup.png';
+  static String dev = 'lib/assets/images/dev.png';
 }

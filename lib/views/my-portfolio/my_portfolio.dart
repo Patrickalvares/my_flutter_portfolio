@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/desktop_misc_mockups.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/mobile_misc_mockups.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/tablet_misc_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/desktop_provider_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/mobile_provider_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/remediando/desktop_remediando.dart';
@@ -20,7 +23,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
       children: [
         LayoutBuilder(
           builder: (context, constraints) {
-            if (size.width > 810) {
+            if (size.width > 840) {
               return const DesktopRemediando();
             } else {
               return const MobileRemediando();
@@ -33,6 +36,17 @@ class _MyPortfolioState extends State<MyPortfolio> {
               return const DesktopProviderMockups();
             } else {
               return const MobileProviderMockups();
+            }
+          },
+        ),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            if (size.width > 1450) {
+              return const DesktopMiscMockups();
+            } else if (size.width < 1450 && size.width > 725) {
+              return const TabletMiscMockups();
+            } else {
+              return const MobileMiscMockups();
             }
           },
         ),

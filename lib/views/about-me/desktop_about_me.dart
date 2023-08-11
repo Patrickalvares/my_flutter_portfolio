@@ -21,11 +21,10 @@ class DesktopAboutMe extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              AppAssets.myPhoto,
-              height: 450,
-              width: 400,
+              AppAssets.dev,
+              height: 350,
             ),
-            const SizedBox(height: 25),
+            const SizedBox(width: 25),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

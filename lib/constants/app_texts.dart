@@ -72,7 +72,7 @@ class AppTexts {
   );
 
   static Text appDeveloper = Text(
-    'Com profunda expertise em Dart e Flutter, tenho uma vasta experiência no desenvolvimento '
+    'Com expertise em Dart e Flutter, tenho experiência no desenvolvimento '
     'de soluções mobile. Meu foco é sempre na criação de aplicativos intuitivos e de alto desempenho,'
     ' utilizando as melhores práticas e ferramentas disponíveis. Minha paixão é transformar ideias em '
     'realidade digital, criando soluções que atendam e superem as expectativas dos usuários.',
