@@ -61,7 +61,6 @@ class _MainDashBoardState extends State<MainDashBoard> {
                     key: const ValueKey(1),
                     controller: _controller,
                     child: const FirstView()),
-                const SizedBox(height: 220),
                 AutoScrollTag(
                     index: 2,
                     key: const ValueKey(2),

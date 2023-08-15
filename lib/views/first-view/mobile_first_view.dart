@@ -16,7 +16,8 @@ class TabletFirstView extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.only(top: size.height * 0.1),
+      padding:
+          EdgeInsets.only(top: size.height * 0.02, bottom: size.height * 0.04),
       child: Column(
         children: [
           Column(
@@ -62,20 +63,12 @@ class TabletFirstView extends StatelessWidget {
                           AppTexts.rollingTitles,
                         ],
                       ),
-                      const SizedBox(height: 15),
-                      SizedBox(
-                        width: size.width * 0.9,
-                        child: FadeInUp(
-                            duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 3700),
-                            child: AppTexts.introText),
-                      ),
                       const SizedBox(height: 22),
                       Row(
                         children: [
                           FadeIn(
                             duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 5200),
+                            delay: const Duration(milliseconds: 3700),
                             child: SocialButton(
                               externalLink: AppLinks.linkedin,
                               imageAsset: AppAssets.linkedin,
@@ -87,7 +80,7 @@ class TabletFirstView extends StatelessWidget {
                           const SizedBox(width: 12),
                           FadeIn(
                             duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 5800),
+                            delay: const Duration(milliseconds: 5200),
                             child: SocialButton(
                               externalLink: AppLinks.github,
                               imageAsset: AppAssets.github,
@@ -99,7 +92,7 @@ class TabletFirstView extends StatelessWidget {
                           const SizedBox(width: 12),
                           FadeIn(
                             duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 6300),
+                            delay: const Duration(milliseconds: 5800),
                             child: SocialButton(
                               externalLink: AppLinks.alura,
                               imageAsset: AppAssets.alura,
@@ -111,7 +104,7 @@ class TabletFirstView extends StatelessWidget {
                           const SizedBox(width: 12),
                           FadeIn(
                             duration: const Duration(milliseconds: 1500),
-                            delay: const Duration(milliseconds: 6800),
+                            delay: const Duration(milliseconds: 6300),
                             child: SocialButton(
                               externalLink: AppLinks.whatsapp,
                               imageAsset: AppAssets.whatsapp,
@@ -125,14 +118,21 @@ class TabletFirstView extends StatelessWidget {
                       const SizedBox(height: 20),
                       FadeInUp(
                         duration: const Duration(milliseconds: 1500),
-                        delay: const Duration(milliseconds: 7300),
+                        delay: const Duration(milliseconds: 6800),
                         child: const AnimatedButton(
                           buttonName: 'Download do Currículo',
                         ),
                       ),
+                      const SizedBox(height: 15),
+                      SizedBox(
+                        width: size.width * 0.9,
+                        child: FadeInUp(
+                            duration: const Duration(milliseconds: 1500),
+                            delay: const Duration(milliseconds: 7300),
+                            child: AppTexts.introText),
+                      ),
                     ],
                   ),
-                  const SizedBox(width: 20),
                 ],
               ),
             ],

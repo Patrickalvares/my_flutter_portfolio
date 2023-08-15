@@ -10,76 +10,81 @@ class MobileAboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Container(
-      height: 1150,
       color: AppColors.backgroundColor2,
       alignment: Alignment.center,
-      child: Column(
-        children: [
-          Image.asset(
-            AppAssets.dev,
-            height: 450,
-            width: 400,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      FadeInRight(
-                        duration: const Duration(milliseconds: 1500),
-                        delay: const Duration(milliseconds: 1700),
-                        child: RichText(
-                          text: TextSpan(
-                              text: 'Sobre ',
-                              style: AppTextStyles.headingStyles().copyWith(
-                                fontSize: 30,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: 'Mim',
-                                  style: AppTextStyles.headingStyles().copyWith(
-                                    fontSize: 30,
-                                    color: AppColors.robinEdgeBlue,
-                                  ),
-                                ),
-                              ]),
-                        ),
-                      ),
-                      const SizedBox(height: 6),
-                      FadeInRight(
-                        duration: const Duration(milliseconds: 1200),
-                        child: Text(
-                          'Desenvolvedor Flutter',
-                          style:
-                              AppTextStyles.montseratStyle(color: Colors.white),
-                        ),
-                      ),
-                      const SizedBox(width: 6),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12),
-                        child: FadeInLeft(
-                            duration: const Duration(milliseconds: 1600),
-                            child: AppTexts.aboutMeText),
-                      ),
-                      const SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: FadeInLeft(
-                            duration: const Duration(milliseconds: 1600),
-                            child: AppTexts.stacks),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+      child: Padding(
+        padding: EdgeInsets.only(
+            top: size.height * 0.02, bottom: size.height * 0.04),
+        child: Column(
+          children: [
+            Image.asset(
+              AppAssets.dev,
+              height: 450,
+              width: 400,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        FadeInRight(
+                          duration: const Duration(milliseconds: 1500),
+                          delay: const Duration(milliseconds: 1700),
+                          child: RichText(
+                            text: TextSpan(
+                                text: 'Sobre ',
+                                style: AppTextStyles.headingStyles().copyWith(
+                                  fontSize: 30,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'Mim',
+                                    style:
+                                        AppTextStyles.headingStyles().copyWith(
+                                      fontSize: 30,
+                                      color: AppColors.robinEdgeBlue,
+                                    ),
+                                  ),
+                                ]),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        FadeInRight(
+                          duration: const Duration(milliseconds: 1200),
+                          child: Text(
+                            'Desenvolvedor Flutter',
+                            style: AppTextStyles.montseratStyle(
+                                color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 12),
+                          child: FadeInLeft(
+                              duration: const Duration(milliseconds: 1600),
+                              child: AppTexts.aboutMeText),
+                        ),
+                        const SizedBox(height: 15),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: FadeInLeft(
+                              duration: const Duration(milliseconds: 1600),
+                              child: AppTexts.stacks),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
