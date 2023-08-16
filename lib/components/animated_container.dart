@@ -32,7 +32,7 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
         width: widget.hover ? 450 : 435,
         height: (size.width > 1020)
             ? (widget.hover ? 450 : 435)
-            : (widget.hover ? 475 : 460),
+            : (widget.hover ? 500 : 485),
         alignment: Alignment.center,
         transform: widget.hover ? onHoverActive : onHoverRemove,
         padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 24),
@@ -71,9 +71,10 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
               style: AppTextStyles.montseratStyle(color: Colors.white)
                   .copyWith(fontStyle: widget.hover ? FontStyle.italic : null),
             ),
-            const SizedBox(height: 12),
-            Flexible(child: widget.serviceText),
-            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.only(top: 12, bottom: 12),
+              child: Expanded(child: widget.serviceText),
+            ),
           ],
         ),
       ),

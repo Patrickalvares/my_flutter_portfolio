@@ -17,7 +17,10 @@ class TabletFirstView extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.only(
-          top: size.height * 0.02, bottom: size.height * 0.04, right: 10),
+          top: size.height * 0.02,
+          bottom: size.height * 0.04,
+          right: 10,
+          left: 20),
       child: Column(
         children: [
           Column(

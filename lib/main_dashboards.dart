@@ -44,39 +44,45 @@ class _MainDashBoardState extends State<MainDashBoard> {
           : null,
       body: ScrollbarTheme(
         data: ScrollbarThemeData(
+          isAlwaysShown: true,
           thumbColor: MaterialStateProperty.all(AppColors.hoverColor),
           trackColor: MaterialStateProperty.all(AppColors.themeColor),
         ),
-        child: Scrollbar(
+        child: SingleChildScrollView(
           controller: _controller,
-          trackVisibility: true,
-          thumbVisibility: true,
-          child: SingleChildScrollView(
-            controller: _controller,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AutoScrollTag(
-                    index: 1,
-                    key: const ValueKey(1),
-                    controller: _controller,
-                    child: const FirstView()),
-                AutoScrollTag(
-                    index: 2,
-                    key: const ValueKey(2),
-                    controller: _controller,
-                    child: const AboutMe()),
-                AutoScrollTag(
-                    index: 3,
-                    key: const ValueKey(3),
-                    controller: _controller,
-                    child: const MyServices()),
-                AutoScrollTag(
-                    index: 4,
-                    key: const ValueKey(4),
-                    controller: _controller,
-                    child: const MyPortfolio()),
-              ],
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1920),
+              child: Scrollbar(
+                controller: _controller,
+                trackVisibility: true,
+                thumbVisibility: true,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AutoScrollTag(
+                        index: 1,
+                        key: const ValueKey(1),
+                        controller: _controller,
+                        child: const FirstView()),
+                    AutoScrollTag(
+                        index: 2,
+                        key: const ValueKey(2),
+                        controller: _controller,
+                        child: const AboutMe()),
+                    AutoScrollTag(
+                        index: 3,
+                        key: const ValueKey(3),
+                        controller: _controller,
+                        child: const MyServices()),
+                    AutoScrollTag(
+                        index: 4,
+                        key: const ValueKey(4),
+                        controller: _controller,
+                        child: const MyPortfolio()),
+                  ],
+                ),
+              ),
             ),
           ),
         ),

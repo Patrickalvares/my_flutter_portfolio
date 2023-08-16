@@ -12,21 +12,27 @@ class TabletMiscMockups extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: 1350,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),
       decoration: BoxDecoration(color: AppColors.backgroundColor2),
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Mockup(
                 title: 'Login: Tinder',
                 image: AppAssets.tinderMockup,
                 github: AppLinks.tinderMockup,
               ),
-              const Spacer(),
+              const SizedBox(
+                height: 520,
+                child: VerticalDivider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                  width: 20.0,
+                ),
+              ),
               Mockup(
                 title: 'App de Carteira',
                 image: AppAssets.financeMockup,
@@ -34,15 +40,30 @@ class TabletMiscMockups extends StatelessWidget {
               ),
             ],
           ),
-          const Spacer(),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 12),
+            child: Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+              height: 20.0,
+            ),
+          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Mockup(
                 title: 'Instagram',
                 image: AppAssets.instagramMockup,
                 github: AppLinks.instagramMockup,
               ),
-              const Spacer(),
+              const SizedBox(
+                height: 520,
+                child: VerticalDivider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                  width: 20.0,
+                ),
+              ),
               Mockup(
                 title: 'Login: Finanças ',
                 image: AppAssets.loginMockup,

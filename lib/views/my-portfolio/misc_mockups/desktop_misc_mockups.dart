@@ -17,26 +17,47 @@ class DesktopMiscMockups extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),
       decoration: BoxDecoration(color: AppColors.backgroundColor2),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Mockup(
             title: 'Login: Tinder',
             image: AppAssets.tinderMockup,
             github: AppLinks.tinderMockup,
           ),
-          const Spacer(),
+          const SizedBox(
+            height: 520,
+            child: VerticalDivider(
+              color: Colors.grey,
+              thickness: 1.0,
+              width: 20.0,
+            ),
+          ),
           Mockup(
             title: 'App de Carteira',
             image: AppAssets.financeMockup,
             github: AppLinks.financeMockup,
           ),
-          const Spacer(),
+          const SizedBox(
+            height: 520,
+            child: VerticalDivider(
+              color: Colors.grey,
+              thickness: 1.0,
+              width: 20.0,
+            ),
+          ),
           Mockup(
             title: 'Instagram',
             image: AppAssets.instagramMockup,
             github: AppLinks.instagramMockup,
           ),
-          const Spacer(),
+          const SizedBox(
+            height: 520,
+            child: VerticalDivider(
+              color: Colors.grey,
+              thickness: 1.0,
+              width: 20.0,
+            ),
+          ),
           Mockup(
             title: 'Login: Finanças ',
             image: AppAssets.loginMockup,

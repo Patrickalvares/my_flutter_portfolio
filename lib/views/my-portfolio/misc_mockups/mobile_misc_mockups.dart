@@ -22,25 +22,48 @@ class MobileMiscMockups extends StatelessWidget {
             image: AppAssets.tinderMockup,
             github: AppLinks.tinderMockup,
           ),
-          const SizedBox(height: 25),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 12),
+            child: Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+              height: 20.0,
+            ),
+          ),
           Mockup(
             title: 'App de Carteira',
             image: AppAssets.financeMockup,
             github: AppLinks.financeMockup,
           ),
-          const SizedBox(height: 25),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 12),
+            child: Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+              height: 20.0,
+            ),
+          ),
           Mockup(
             title: 'Instagram',
             image: AppAssets.instagramMockup,
             github: AppLinks.instagramMockup,
           ),
-          const SizedBox(height: 25),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 12),
+            child: Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+              height: 20.0,
+            ),
+          ),
           Mockup(
             title: 'Login: Finanças ',
             image: AppAssets.loginMockup,
             github: AppLinks.loginMockup,
           ),
-          const SizedBox(height: 25),
+          const Padding(
+            padding: EdgeInsets.only(top: 25, bottom: 12),
+          ),
         ],
       ),
     );
