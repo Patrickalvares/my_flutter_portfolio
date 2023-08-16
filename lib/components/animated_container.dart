@@ -25,11 +25,14 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
   final onHoverRemove = Matrix4.identity()..translate(0, 0, 0);
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: AnimatedContainer(
         width: widget.hover ? 450 : 435,
-        height: widget.hover ? 450 : 435,
+        height: (size.width > 1020)
+            ? (widget.hover ? 450 : 435)
+            : (widget.hover ? 475 : 460),
         alignment: Alignment.center,
         transform: widget.hover ? onHoverActive : onHoverRemove,
         padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 24),

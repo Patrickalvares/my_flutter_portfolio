@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:my_flutter_portfolio/views/my-services/desktop_my_services.dart';
-import 'package:my_flutter_portfolio/views/my-services/phone_my_services.dart';
+import 'package:my_flutter_portfolio/views/my-services/mobile_my_services.dart';
 import 'package:my_flutter_portfolio/views/my-services/tablet_my_services.dart';
 
 class MyServices extends StatefulWidget {

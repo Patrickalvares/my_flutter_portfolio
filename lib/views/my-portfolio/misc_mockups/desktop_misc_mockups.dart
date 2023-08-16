@@ -20,25 +20,25 @@ class DesktopMiscMockups extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Mockup(
-            title: 'Tela de login: Tinder',
+            title: 'Login: Tinder',
             image: AppAssets.tinderMockup,
             github: AppLinks.tinderMockup,
           ),
-          Spacer(),
+          const Spacer(),
           Mockup(
             title: 'App de Carteira',
             image: AppAssets.financeMockup,
             github: AppLinks.financeMockup,
           ),
-          Spacer(),
+          const Spacer(),
           Mockup(
             title: 'Instagram',
             image: AppAssets.instagramMockup,
             github: AppLinks.instagramMockup,
           ),
-          Spacer(),
+          const Spacer(),
           Mockup(
-            title: 'Tela de login: Finanças ',
+            title: 'Login: Finanças ',
             image: AppAssets.loginMockup,
             github: AppLinks.loginMockup,
           ),

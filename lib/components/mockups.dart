@@ -49,7 +49,17 @@ class _MockupState extends State<Mockup> {
               children: [
                 Opacity(
                   opacity: _isHovering ? 0.8 : 1.0,
-                  child: SizedBox(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: const Offset(3, 3),
+                        ),
+                      ],
+                    ),
                     height: 482.50,
                     width: 225.00,
                     child: Image.asset(
@@ -80,7 +90,9 @@ class _MockupState extends State<Mockup> {
     showDialog(
       context: context,
       builder: (context) => Dialog(
-        child: Image.asset(imagePath),
+        child: GestureDetector(
+            child: Image.asset(imagePath),
+            onTap: () => Navigator.pop(context, true)),
       ),
     );
   }

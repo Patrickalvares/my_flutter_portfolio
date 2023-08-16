@@ -23,8 +23,7 @@ class MobileAboutMe extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Image.asset(
                 AppAssets.dev,
-                height: 450,
-                width: 400,
+                width: size.width * 0.9,
               ),
             ),
             Padding(
@@ -57,25 +56,25 @@ class MobileAboutMe extends StatelessWidget {
                                 ]),
                           ),
                         ),
-                        const SizedBox(height: 6),
-                        FadeInRight(
-                          duration: const Duration(milliseconds: 1200),
-                          child: Text(
-                            'Desenvolvedor Flutter',
-                            style: AppTextStyles.montseratStyle(
-                                color: Colors.white),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6),
+                          child: FadeInRight(
+                            duration: const Duration(milliseconds: 1200),
+                            child: Text(
+                              'Desenvolvedor Flutter',
+                              style: AppTextStyles.montseratStyle(
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
-                        const SizedBox(width: 6),
                         Padding(
-                          padding: const EdgeInsets.only(top: 12),
+                          padding: const EdgeInsets.only(top: 18),
                           child: FadeInLeft(
                               duration: const Duration(milliseconds: 1600),
                               child: AppTexts.aboutMeText),
                         ),
-                        const SizedBox(height: 15),
                         Padding(
-                          padding: const EdgeInsets.only(top: 20),
+                          padding: const EdgeInsets.only(top: 35),
                           child: FadeInLeft(
                               duration: const Duration(milliseconds: 1600),
                               child: AppTexts.stacks),

@@ -15,10 +15,23 @@ class SimpleHtmlYoutubeIframe extends StatelessWidget {
     String content =
         '<iframe src="https://www.youtube.com/embed/$youtubeCode"></iframe>';
 
-    return SizedBox(
+    return Container(
       height: 482.50,
       width: 225.00,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: const Offset(3, 3),
+          ),
+        ],
+      ),
       child: HtmlWidget(
+        onLoadingBuilder: (context, element, loadingProgress) =>
+            const CircularProgressIndicator(),
         content,
         factoryBuilder: () => _YoutubeIframeWidgetFactory(),
       ),

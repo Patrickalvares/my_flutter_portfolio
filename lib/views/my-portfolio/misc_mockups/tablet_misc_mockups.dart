@@ -22,7 +22,7 @@ class TabletMiscMockups extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Mockup(
-                title: 'Tela de login: Tinder',
+                title: 'Login: Tinder',
                 image: AppAssets.tinderMockup,
                 github: AppLinks.tinderMockup,
               ),
@@ -44,7 +44,7 @@ class TabletMiscMockups extends StatelessWidget {
               ),
               const Spacer(),
               Mockup(
-                title: 'Tela de login: Finanças ',
+                title: 'Login: Finanças ',
                 image: AppAssets.loginMockup,
                 github: AppLinks.loginMockup,
               ),

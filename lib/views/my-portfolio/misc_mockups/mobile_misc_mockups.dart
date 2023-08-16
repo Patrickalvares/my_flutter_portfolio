@@ -18,7 +18,7 @@ class MobileMiscMockups extends StatelessWidget {
       child: Column(
         children: [
           Mockup(
-            title: 'Tela de login: Tinder',
+            title: 'Login: Tinder',
             image: AppAssets.tinderMockup,
             github: AppLinks.tinderMockup,
           ),
@@ -36,7 +36,7 @@ class MobileMiscMockups extends StatelessWidget {
           ),
           const SizedBox(height: 25),
           Mockup(
-            title: 'Tela de login: Finanças ',
+            title: 'Login: Finanças ',
             image: AppAssets.loginMockup,
             github: AppLinks.loginMockup,
           ),

@@ -13,8 +13,6 @@ class MobileRemediando extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width,
-      height: 1400,
       alignment: Alignment.center,
       padding:
           EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.03),
@@ -23,57 +21,60 @@ class MobileRemediando extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
-        child: SizedBox(
-          child: Column(
-            children: [
-              RichText(
-                text: TextSpan(
-                    text: 'Meus ',
-                    style: AppTextStyles.headingStyles().copyWith(
-                      fontSize: 30,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'Projetos',
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                children: [
+                  RichText(
+                    text: TextSpan(
+                        text: 'Meus ',
                         style: AppTextStyles.headingStyles().copyWith(
                           fontSize: 30,
-                          color: AppColors.robinEdgeBlue,
                         ),
-                      ),
-                    ]),
+                        children: [
+                          TextSpan(
+                            text: 'Projetos',
+                            style: AppTextStyles.headingStyles().copyWith(
+                              fontSize: 30,
+                              color: AppColors.robinEdgeBlue,
+                            ),
+                          ),
+                        ]),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Remediando: App de Gerenciar Remédios',
+                    style: AppTextStyles.montseratStyle().copyWith(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SimpleHtmlYoutubeIframe(
+                    key: key,
+                    youtubeCode: 'Zznm4VTGW0Y',
+                  ),
+                  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10, bottom: 10),
+                          child:
+                              RemediandoText(fontTextSize: 15).remediandoInfo,
+                        ),
+                        RegularGithubButton(link: AppLinks.remediandoLink),
+                      ]),
+                ],
               ),
-              const SizedBox(
-                height: 30,
-              ),
-              Text(
-                'Remediando: App de Gerenciar Remédios',
-                style: AppTextStyles.montseratStyle().copyWith(
-                    fontSize: 30,
-                    color: Colors.white,
-                    fontWeight: FontWeight.normal),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              SimpleHtmlYoutubeIframe(
-                key: key,
-                youtubeCode: 'Zznm4VTGW0Y',
-              ),
-              Expanded(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 10, right: 10, bottom: 10),
-                        child: RemediandoText(fontTextSize: 15).remediandoInfo,
-                      ),
-                      RegularGithubButton(link: AppLinks.remediandoLink),
-                    ]),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
