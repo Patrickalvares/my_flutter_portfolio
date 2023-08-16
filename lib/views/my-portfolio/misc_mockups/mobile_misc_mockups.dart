@@ -12,7 +12,6 @@ class MobileMiscMockups extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: 2600,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.1),
       decoration: BoxDecoration(color: AppColors.backgroundColor2),
@@ -23,24 +22,25 @@ class MobileMiscMockups extends StatelessWidget {
             image: AppAssets.tinderMockup,
             github: AppLinks.tinderMockup,
           ),
-          const Spacer(),
+          const SizedBox(height: 25),
           Mockup(
             title: 'App de Carteira',
             image: AppAssets.financeMockup,
             github: AppLinks.financeMockup,
           ),
-          const Spacer(),
+          const SizedBox(height: 25),
           Mockup(
             title: 'Instagram',
             image: AppAssets.instagramMockup,
             github: AppLinks.instagramMockup,
           ),
-          const Spacer(),
+          const SizedBox(height: 25),
           Mockup(
             title: 'Tela de login: Finanças ',
             image: AppAssets.loginMockup,
             github: AppLinks.loginMockup,
-          )
+          ),
+          const SizedBox(height: 25),
         ],
       ),
     );

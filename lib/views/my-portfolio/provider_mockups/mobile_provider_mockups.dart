@@ -23,6 +23,7 @@ class MobileProviderMockups extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: SizedBox(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Center(

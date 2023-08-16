@@ -22,7 +22,7 @@ class DesktopProviderMockups extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: SizedBox(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
                 child: Text(
