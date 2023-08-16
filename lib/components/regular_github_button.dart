@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_portfolio/constants/app_assets.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,9 +32,24 @@ class RegularGithubButtonState extends State<RegularGithubButton>
       ),
       height: 55,
       minWidth: 120,
-      child: Text(
-        'Repositório',
-        style: AppTextStyles.headerTextStyle(),
+      child: SizedBox(
+        width: 120,
+        child: Row(
+          children: [
+            Text(
+              ' Repositório ',
+              style: AppTextStyles.headerTextStyle(),
+            ),
+            SizedBox(
+              height: 20,
+              width: 20,
+              child: Image.asset(
+                AppAssets.share,
+                color: Colors.white,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

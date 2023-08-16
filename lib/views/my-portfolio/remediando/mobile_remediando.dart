@@ -12,77 +12,67 @@ class MobileRemediando extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return Expanded(
-      child: Container(
-        width: size.width,
-        height: 1400,
-        alignment: Alignment.center,
-        padding:
-            EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.03),
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color(0XFF004953),
-            Color.fromARGB(255, 1, 67, 76),
-            Color(0xff003153),
-          ],
-        )),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: SizedBox(
-            child: Column(
-              children: [
-                RichText(
-                  text: TextSpan(
-                      text: 'Meus ',
-                      style: AppTextStyles.headingStyles().copyWith(
-                        fontSize: 30,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: 'Projetos',
-                          style: AppTextStyles.headingStyles().copyWith(
-                            fontSize: 30,
-                            color: AppColors.robinEdgeBlue,
-                          ),
-                        ),
-                      ]),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  'Remediando: App de Gerenciar Remédios',
-                  style: AppTextStyles.montseratStyle().copyWith(
+    return Container(
+      width: size.width,
+      height: 1400,
+      alignment: Alignment.center,
+      padding:
+          EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.03),
+      decoration: BoxDecoration(
+        color: AppColors.backgroundColor2,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: SizedBox(
+          child: Column(
+            children: [
+              RichText(
+                text: TextSpan(
+                    text: 'Meus ',
+                    style: AppTextStyles.headingStyles().copyWith(
                       fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.normal),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                SimpleHtmlYoutubeIframe(
-                  key: key,
-                  youtubeCode: 'Zznm4VTGW0Y',
-                ),
-                Expanded(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 10, right: 10, bottom: 10),
-                          child:
-                              RemediandoText(fontTextSize: 15).remediandoInfo,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Projetos',
+                        style: AppTextStyles.headingStyles().copyWith(
+                          fontSize: 30,
+                          color: AppColors.robinEdgeBlue,
                         ),
-                        RegularGithubButton(link: AppLinks.remediandoLink),
-                      ]),
-                ),
-              ],
-            ),
+                      ),
+                    ]),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Remediando: App de Gerenciar Remédios',
+                style: AppTextStyles.montseratStyle().copyWith(
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              SimpleHtmlYoutubeIframe(
+                key: key,
+                youtubeCode: 'Zznm4VTGW0Y',
+              ),
+              Expanded(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 10, right: 10, bottom: 10),
+                        child: RemediandoText(fontTextSize: 15).remediandoInfo,
+                      ),
+                      RegularGithubButton(link: AppLinks.remediandoLink),
+                    ]),
+              ),
+            ],
           ),
         ),
       ),

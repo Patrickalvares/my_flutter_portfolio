@@ -16,7 +16,8 @@ class DesktopFirstView extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.only(top: size.height * 0.2),
+      padding:
+          EdgeInsets.only(top: size.height * 0.2, bottom: size.height * 0.3),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

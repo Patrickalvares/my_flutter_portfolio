@@ -17,4 +17,5 @@ class AppAssets {
   static String loginMockup = 'lib/assets/images/login_mockup.png';
   static String financeMockup = 'lib/assets/images/finance_mockup.png';
   static String dev = 'lib/assets/images/dev.png';
+  static String expandImage = 'lib/assets/images/expand.png';
 }

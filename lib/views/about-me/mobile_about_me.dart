@@ -16,13 +16,16 @@ class MobileAboutMe extends StatelessWidget {
       alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.only(
-            top: size.height * 0.02, bottom: size.height * 0.04),
+            top: size.height * 0.02, bottom: size.height * 0.04, right: 10),
         child: Column(
           children: [
-            Image.asset(
-              AppAssets.dev,
-              height: 450,
-              width: 400,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset(
+                AppAssets.dev,
+                height: 450,
+                width: 400,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),

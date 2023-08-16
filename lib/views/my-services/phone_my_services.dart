@@ -50,45 +50,48 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
             ),
           ),
           const SizedBox(height: 60),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {},
-                onHover: (value) => setState(() {
-                  isContainerOneHover = value;
-                }),
-                child: InfoAnimatedConatiner(
-                    serviceText: AppTexts.appDeveloper,
-                    hover: isContainerOneHover,
-                    imageAsset: AppAssets.code,
-                    title: 'Desenvolvimento de Aplicativos'),
-              ),
-              const SizedBox(height: 18),
-              InkWell(
-                onTap: () {},
-                onHover: (value) => setState(() {
-                  isContainerTwoHover = value;
-                }),
-                child: InfoAnimatedConatiner(
-                    serviceText: AppTexts.uxUi,
-                    hover: isContainerTwoHover,
-                    imageAsset: AppAssets.brush,
-                    title: 'UX/UI'),
-              ),
-              const SizedBox(height: 18),
-              InkWell(
-                onTap: () {},
-                onHover: (value) => setState(() {
-                  isContainerThreeHover = value;
-                }),
-                child: InfoAnimatedConatiner(
-                    serviceText: AppTexts.growing,
-                    hover: isContainerThreeHover,
-                    imageAsset: AppAssets.graph,
-                    title: 'Crescimento'),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) => setState(() {
+                    isContainerOneHover = value;
+                  }),
+                  child: InfoAnimatedConatiner(
+                      serviceText: AppTexts.appDeveloper,
+                      hover: isContainerOneHover,
+                      imageAsset: AppAssets.code,
+                      title: 'Desenvolvimento de Aplicativos'),
+                ),
+                const SizedBox(height: 18),
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) => setState(() {
+                    isContainerTwoHover = value;
+                  }),
+                  child: InfoAnimatedConatiner(
+                      serviceText: AppTexts.uxUi,
+                      hover: isContainerTwoHover,
+                      imageAsset: AppAssets.brush,
+                      title: 'UX/UI'),
+                ),
+                const SizedBox(height: 18),
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) => setState(() {
+                    isContainerThreeHover = value;
+                  }),
+                  child: InfoAnimatedConatiner(
+                      serviceText: AppTexts.growing,
+                      hover: isContainerThreeHover,
+                      imageAsset: AppAssets.graph,
+                      title: 'Crescimento'),
+                ),
+              ],
+            ),
           )
         ],
       ),

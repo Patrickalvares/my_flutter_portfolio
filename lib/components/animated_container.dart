@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_portfolio/components/animated_button.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 
@@ -7,7 +6,7 @@ class InfoAnimatedConatiner extends StatefulWidget {
   final String title;
   final String imageAsset;
   final Text serviceText;
-  bool hover;
+  final bool hover;
 
   InfoAnimatedConatiner({
     super.key,
@@ -70,7 +69,7 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
                   .copyWith(fontStyle: widget.hover ? FontStyle.italic : null),
             ),
             const SizedBox(height: 12),
-            widget.serviceText,
+            Flexible(child: widget.serviceText),
             const SizedBox(height: 12),
           ],
         ),
