@@ -33,35 +33,35 @@ class AppTexts {
   );
 
   static AutoSizeText aboutMeText = AutoSizeText(
-    'Um entusiasta da tecnologia e desenvolvedor mobile especializado em Flutter e Dart,'
-    ' sou de Maringá – PR. Com formação em Administração de Empresas pela Universidade'
-    ' Estadual de Maringá e atual graduação em Engenharia de Software pela UniCesumar, '
-    'combino minha paixão pela tecnologia com uma abordagem orientada a objetivos e '
-    'resultados. Trago ao meu trabalho valores como respeito, criatividade e pontualidade'
-    ', e tenho como objetivo criar experiências significativas através da tecnologia. ',
-    style: AppTextStyles.normalStyle().copyWith(fontSize: 18),
-    textAlign: TextAlign.justify,
-  );
+      'Um entusiasta da tecnologia e desenvolvedor mobile especializado em Flutter e Dart,'
+      ' sou de Maringá – PR. Com formação em Administração de Empresas pela Universidade'
+      ' Estadual de Maringá e atual graduação em Engenharia de Software pela UniCesumar, '
+      'combino minha paixão pela tecnologia com uma abordagem orientada a objetivos e '
+      'resultados. Trago ao meu trabalho valores como respeito, criatividade e pontualidade'
+      ', e tenho como objetivo criar experiências significativas através da tecnologia. ',
+      style: AppTextStyles.normalStyle().copyWith(fontSize: 18),
+      textAlign: TextAlign.justify,
+      overflow: TextOverflow.clip);
 
   static AutoSizeText introText = AutoSizeText(
-    'Neste portfólio, você encontrará projetos que refletem minha jornada no mundo da tecnologia. '
-    'Cada um deles é uma expressão do meu entusiasmo e do desejo genuíno de aprender e crescer nesta área. '
-    'Tenho uma forte inclinação para a tecnologia e estou comprometido em continuar meu desenvolvimento neste '
-    'campo. Ao explorar meu trabalho, espero que você perceba a paixão e dedicação que coloco em cada projeto. '
-    'Seja bem-vindo ao meu portfólio e obrigado por considerar minha trajetória!',
-    style: AppTextStyles.normalStyle().copyWith(fontSize: 18),
-    textAlign: TextAlign.justify,
-  );
+      'Neste portfólio, você encontrará projetos que refletem minha jornada no mundo da tecnologia. '
+      'Cada um deles é uma expressão do meu entusiasmo e do desejo genuíno de aprender e crescer nesta área. '
+      'Tenho uma forte inclinação para a tecnologia e estou comprometido em continuar meu desenvolvimento neste '
+      'campo. Ao explorar meu trabalho, espero que você perceba a paixão e dedicação que coloco em cada projeto. '
+      'Seja bem-vindo ao meu portfólio e obrigado por considerar minha trajetória!',
+      style: AppTextStyles.normalStyle().copyWith(fontSize: 18),
+      textAlign: TextAlign.justify,
+      overflow: TextOverflow.clip);
 
   static AutoSizeText stacks = AutoSizeText(
-    'Stacks: Flutter, Dart, Rest API client, Null Safety, Widgets, Stateless, '
-    'Stateful, HTML5, CSS3, HTTP, Javascript, CRUD, SQLite, Linguagem C, Git, '
-    'BloC Provider, Persistência de Dados, Animações Implícitas e Controladas, '
-    'Programação Orientada a Objetos, Regex, Postman, Sourcetree, VS code, Android Studio.',
-    style: AppTextStyles.normalStyle()
-        .copyWith(fontSize: 19, fontWeight: FontWeight.bold),
-    textAlign: TextAlign.justify,
-  );
+      'Stacks: Flutter, Dart, Rest API client, Null Safety, Widgets, Stateless, '
+      'Stateful, HTML5, CSS3, HTTP, Javascript, CRUD, SQLite, Linguagem C, Git, '
+      'BloC Provider, Persistência de Dados, Animações Implícitas e Controladas, '
+      'Programação Orientada a Objetos, Regex, Postman, Sourcetree, VS code, Android Studio.',
+      style: AppTextStyles.normalStyle()
+          .copyWith(fontSize: 19, fontWeight: FontWeight.bold),
+      textAlign: TextAlign.justify,
+      overflow: TextOverflow.clip);
 
   static Text growing = Text(
     'Na vanguarda da transformação digital, reconheço a importância de alinhar tecnologia com '
@@ -106,6 +106,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Suporte a temas claro e escuro.',
           textAlign: TextAlign.right,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,
@@ -115,6 +116,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Uso do pacote provider para gerenciamento de estado.',
           textAlign: TextAlign.start,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,
@@ -124,6 +126,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Modularização e componentização para reutilização e manutenção.',
           textAlign: TextAlign.start,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,
@@ -133,6 +136,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Uso de fontes personalizadas e ativos de imagem.',
           textAlign: TextAlign.start,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,
@@ -142,6 +146,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Animações e transições suaves entre telas.',
           textAlign: TextAlign.start,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,
@@ -151,6 +156,7 @@ class DesafioText extends StatelessWidget {
         AutoSizeText(
           '→ Layouts responsivos e bem pensados.',
           textAlign: TextAlign.start,
+          overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
             color: Colors.white,

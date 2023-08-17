@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/animated_container.dart';
+import 'package:my_flutter_portfolio/components/non_animated_container.dart';
 import 'package:my_flutter_portfolio/constants/app_assets.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
@@ -59,9 +60,8 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   onHover: (value) => setState(() {
                     isContainerOneHover = value;
                   }),
-                  child: InfoAnimatedConatiner(
+                  child: InfoNonAnimatedConatiner(
                       serviceText: AppTexts.appDeveloper,
-                      hover: isContainerOneHover,
                       imageAsset: AppAssets.code,
                       title: 'Desenvolvimento de Aplicativos'),
                 ),
@@ -71,9 +71,8 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   onHover: (value) => setState(() {
                     isContainerTwoHover = value;
                   }),
-                  child: InfoAnimatedConatiner(
+                  child: InfoNonAnimatedConatiner(
                       serviceText: AppTexts.uxUi,
-                      hover: isContainerTwoHover,
                       imageAsset: AppAssets.brush,
                       title: 'UX/UI'),
                 ),
@@ -83,9 +82,8 @@ class _PhoneMyServicesState extends State<PhoneMyServices> {
                   onHover: (value) => setState(() {
                     isContainerThreeHover = value;
                   }),
-                  child: InfoAnimatedConatiner(
+                  child: InfoNonAnimatedConatiner(
                       serviceText: AppTexts.growing,
-                      hover: isContainerThreeHover,
                       imageAsset: AppAssets.graph,
                       title: 'Crescimento'),
                 ),
