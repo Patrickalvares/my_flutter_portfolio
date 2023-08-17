@@ -73,7 +73,7 @@ class _InfoAnimatedConatinerState extends State<InfoAnimatedConatiner> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 12),
-              child: Expanded(child: widget.serviceText),
+              child: widget.serviceText,
             ),
           ],
         ),

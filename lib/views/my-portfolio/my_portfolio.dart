@@ -19,38 +19,41 @@ class _MyPortfolioState extends State<MyPortfolio> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    return Column(
-      children: [
-        LayoutBuilder(
-          builder: (context, constraints) {
-            if (size.width > 840) {
-              return const DesktopRemediando();
-            } else {
-              return const MobileRemediando();
-            }
-          },
-        ),
-        LayoutBuilder(
-          builder: (context, constraints) {
-            if (size.width > 810) {
-              return const DesktopProviderMockups();
-            } else {
-              return const MobileProviderMockups();
-            }
-          },
-        ),
-        LayoutBuilder(
-          builder: (context, constraints) {
-            if (size.width > 1450) {
-              return const DesktopMiscMockups();
-            } else if (size.width < 1450 && size.width > 725) {
-              return const TabletMiscMockups();
-            } else {
-              return const MobileMiscMockups();
-            }
-          },
-        ),
-      ],
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 1920),
+      child: Column(
+        children: [
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (size.width > 840) {
+                return const DesktopRemediando();
+              } else {
+                return const MobileRemediando();
+              }
+            },
+          ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (size.width > 810) {
+                return const DesktopProviderMockups();
+              } else {
+                return const MobileProviderMockups();
+              }
+            },
+          ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (size.width > 1450) {
+                return const DesktopMiscMockups();
+              } else if (size.width < 1450 && size.width > 725) {
+                return const TabletMiscMockups();
+              } else {
+                return const MobileMiscMockups();
+              }
+            },
+          ),
+        ],
+      ),
     );
   }
 }

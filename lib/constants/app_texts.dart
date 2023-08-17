@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_flutter_portfolio/constants/app_text_style.dart';
@@ -31,7 +32,7 @@ class AppTexts {
     ),
   );
 
-  static Text aboutMeText = Text(
+  static AutoSizeText aboutMeText = AutoSizeText(
     'Um entusiasta da tecnologia e desenvolvedor mobile especializado em Flutter e Dart,'
     ' sou de Maringá – PR. Com formação em Administração de Empresas pela Universidade'
     ' Estadual de Maringá e atual graduação em Engenharia de Software pela UniCesumar, '
@@ -42,7 +43,7 @@ class AppTexts {
     textAlign: TextAlign.justify,
   );
 
-  static Text introText = Text(
+  static AutoSizeText introText = AutoSizeText(
     'Neste portfólio, você encontrará projetos que refletem minha jornada no mundo da tecnologia. '
     'Cada um deles é uma expressão do meu entusiasmo e do desejo genuíno de aprender e crescer nesta área. '
     'Tenho uma forte inclinação para a tecnologia e estou comprometido em continuar meu desenvolvimento neste '
@@ -52,7 +53,7 @@ class AppTexts {
     textAlign: TextAlign.justify,
   );
 
-  static Text stacks = Text(
+  static AutoSizeText stacks = AutoSizeText(
     'Stacks: Flutter, Dart, Rest API client, Null Safety, Widgets, Stateless, '
     'Stateful, HTML5, CSS3, HTTP, Javascript, CRUD, SQLite, Linguagem C, Git, '
     'BloC Provider, Persistência de Dados, Animações Implícitas e Controladas, '
@@ -102,8 +103,8 @@ class DesafioText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Suporte a temas claro e escuro.',
+        AutoSizeText(
+          '→ Suporte a temas claro e escuro.',
           textAlign: TextAlign.right,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
@@ -111,8 +112,8 @@ class DesafioText extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          'Uso do pacote provider para gerenciamento de estado.',
+        AutoSizeText(
+          '→ Uso do pacote provider para gerenciamento de estado.',
           textAlign: TextAlign.start,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
@@ -120,8 +121,8 @@ class DesafioText extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          'Modularização e componentização para reutilização e manutenção.',
+        AutoSizeText(
+          '→ Modularização e componentização para reutilização e manutenção.',
           textAlign: TextAlign.start,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
@@ -129,8 +130,8 @@ class DesafioText extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          'Uso de fontes personalizadas e ativos de imagem.',
+        AutoSizeText(
+          '→ Uso de fontes personalizadas e ativos de imagem.',
           textAlign: TextAlign.start,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
@@ -138,8 +139,8 @@ class DesafioText extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          'Animações e transições suaves entre telas.',
+        AutoSizeText(
+          '→ Animações e transições suaves entre telas.',
           textAlign: TextAlign.start,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,
@@ -147,8 +148,8 @@ class DesafioText extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          'Layouts responsivos e bem pensados.',
+        AutoSizeText(
+          '→ Layouts responsivos e bem pensados.',
           textAlign: TextAlign.start,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,

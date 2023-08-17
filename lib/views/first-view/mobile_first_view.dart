@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/animated_button.dart';
 import 'package:my_flutter_portfolio/components/profile_animation.dart';
@@ -44,8 +45,9 @@ class TabletFirstView extends StatelessWidget {
                       FadeInDown(
                         duration: const Duration(milliseconds: 1500),
                         delay: const Duration(milliseconds: 700),
-                        child: Text(
+                        child: AutoSizeText(
                           'Hello World, it\'s me',
+                          maxLines: 1,
                           style: AppTextStyles.montseratStyle(),
                         ),
                       ),
@@ -53,8 +55,9 @@ class TabletFirstView extends StatelessWidget {
                       FadeInRight(
                         duration: const Duration(milliseconds: 1500),
                         delay: const Duration(milliseconds: 1700),
-                        child: Text(
+                        child: AutoSizeText(
                           'Patrick Alvares',
+                          maxLines: 1,
                           style: AppTextStyles.headingStyles()
                               .copyWith(fontSize: (size.width > 520) ? 36 : 25),
                         ),

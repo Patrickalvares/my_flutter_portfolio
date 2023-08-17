@@ -3,6 +3,7 @@ import 'package:my_flutter_portfolio/components/mockups.dart';
 import 'package:my_flutter_portfolio/constants/app_assets.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
 import 'package:my_flutter_portfolio/constants/app_external_links.dart';
+import 'package:my_flutter_portfolio/constants/app_text_style.dart';
 
 class MobileMiscMockups extends StatelessWidget {
   const MobileMiscMockups({Key? key}) : super(key: key);
@@ -17,10 +18,19 @@ class MobileMiscMockups extends StatelessWidget {
       decoration: BoxDecoration(color: AppColors.backgroundColor2),
       child: Column(
         children: [
-          Mockup(
-            title: 'Login: Tinder',
-            image: AppAssets.tinderMockup,
-            github: AppLinks.tinderMockup,
+          Text(
+            'leituras de mockups',
+            style: AppTextStyles.headingStyles().copyWith(
+              fontSize: 30,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 25, bottom: 12),
+            child: Mockup(
+              title: 'Login: Tinder',
+              image: AppAssets.tinderMockup,
+              github: AppLinks.tinderMockup,
+            ),
           ),
           const Padding(
             padding: EdgeInsets.only(top: 25, bottom: 12),

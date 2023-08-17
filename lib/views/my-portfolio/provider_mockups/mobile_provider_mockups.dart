@@ -13,8 +13,6 @@ class MobileProviderMockups extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width,
-      height: 1050,
       alignment: Alignment.center,
       padding:
           EdgeInsets.symmetric(vertical: 30, horizontal: size.width * 0.03),
@@ -26,19 +24,11 @@ class MobileProviderMockups extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Center(
-                child: Text(
-                  'leituras de mockups',
-                  style: AppTextStyles.headingStyles().copyWith(
-                    fontSize: 30,
-                  ),
-                ),
-              ),
               const SizedBox(
                 height: 30,
               ),
               Text(
-                'Exercicio App com uso de Provider para o Theme',
+                'Exercicio: Provider para o Theme',
                 style: AppTextStyles.montseratStyle().copyWith(
                     fontSize: 25,
                     color: Colors.white,
@@ -51,19 +41,17 @@ class MobileProviderMockups extends StatelessWidget {
                 key: key,
                 youtubeCode: 'Gl7aXzVsuvM',
               ),
-              Expanded(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Padding(
-                        padding:
-                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                        child: DesafioText(fontTextSize: 15),
-                      ),
-                      RegularGithubButton(link: AppLinks.desafioProviderLink),
-                    ]),
-              ),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(
+                          left: 10, right: 10, bottom: 10, top: 15),
+                      child: DesafioText(fontTextSize: 18),
+                    ),
+                    RegularGithubButton(link: AppLinks.desafioProviderLink),
+                  ]),
             ],
           ),
         ),

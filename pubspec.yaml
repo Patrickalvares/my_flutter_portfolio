@@ -49,6 +49,7 @@ dependencies:
   page_transition: ^2.0.9
   fwfh_webview: ^0.7.0+2
   flutter_widget_from_html_core: ^0.10.3
+  auto_size_text: ^3.0.0
 
  
 

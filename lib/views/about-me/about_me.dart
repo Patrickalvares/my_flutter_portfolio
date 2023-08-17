@@ -14,14 +14,17 @@ class _AboutMeState extends State<AboutMe> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (size.width > 970) {
-          return const DesktopAboutMe();
-        } else {
-          return const MobileAboutMe();
-        }
-      },
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 1920),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          if (size.width > 970) {
+            return const DesktopAboutMe();
+          } else {
+            return const MobileAboutMe();
+          }
+        },
+      ),
     );
   }
 }
