@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/iot_car/desktop_iot_car.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/iot_car/mobile_iot_car.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/desktop_misc_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/mobile_misc_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/tablet_misc_mockups.dart';
@@ -69,7 +70,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
               if (size.width > 950) {
                 return const DesktopIotCar();
               } else {
-                return const DesktopIotCar();
+                return const MobileIotCar();
               }
             },
           ),
