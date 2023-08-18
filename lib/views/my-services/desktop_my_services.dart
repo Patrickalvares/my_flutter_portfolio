@@ -23,11 +23,12 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
     final Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: 670,
+      height: size.height,
       color: AppColors.backgroundColor,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 12),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FadeInRight(
             duration: const Duration(milliseconds: 1500),
@@ -51,6 +52,7 @@ class _DesktopMyServicesState extends State<DesktopMyServices> {
           ),
           const SizedBox(height: 60),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(

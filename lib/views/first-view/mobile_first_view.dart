@@ -22,7 +22,7 @@ class TabletFirstView extends StatelessWidget {
         padding: EdgeInsets.only(
             top: size.height * 0.02,
             bottom: size.height * 0.04,
-            right: 10,
+            right: 15,
             left: 20),
         child: Column(
           children: [
@@ -49,7 +49,7 @@ class TabletFirstView extends StatelessWidget {
                           delay: const Duration(milliseconds: 700),
                           child: AutoSizeText(
                             'Hello World, it\'s me',
-                            maxLines: 1,
+                            maxLines: 2,
                             overflow: TextOverflow.clip,
                             style: AppTextStyles.montseratStyle(),
                           ),
@@ -60,10 +60,11 @@ class TabletFirstView extends StatelessWidget {
                           delay: const Duration(milliseconds: 1700),
                           child: AutoSizeText(
                             'Patrick Alvares',
-                            maxLines: 1,
+                            maxFontSize: 18,
+                            minFontSize: 12,
+                            maxLines: 2,
                             overflow: TextOverflow.clip,
-                            style: AppTextStyles.headingStyles().copyWith(
-                                fontSize: (size.width > 520) ? 36 : 25),
+                            style: AppTextStyles.headingStyles(),
                           ),
                         ),
                         const SizedBox(height: 15),

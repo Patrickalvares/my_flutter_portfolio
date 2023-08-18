@@ -90,6 +90,21 @@ class AppTexts {
     style: AppTextStyles.normalStyle(),
     textAlign: TextAlign.justify,
   );
+  static AutoSizeText snakeText = AutoSizeText(
+    'Em julho de 2022, iniciei o desenvolvimento do GameSnake'
+    ' em parceria com meu amigo Eric, que é especialista em sistemas embarcados. Utilizamos a biblioteca '
+    'Allegro, facilitando a criação de gráficos e sons. A estrutura modular do código, a gestão eficiente'
+    ' de recursos e a manipulação orientada a eventos foram características marcantes. Além dos aspectos '
+    'técnicos, o jogo inclui um sistema de registros para pontuações records. A colaboração com um amigo experiente '
+    'em C transformou este projeto em uma experiência de aprendizado enriquecedora e divertida.',
+    textAlign: TextAlign.justify,
+    minFontSize: 12,
+    style: GoogleFonts.mukta(
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+  );
 }
 
 class DesafioText extends StatelessWidget {

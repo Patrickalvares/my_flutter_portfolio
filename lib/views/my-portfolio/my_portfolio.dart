@@ -5,6 +5,8 @@ import 'package:my_flutter_portfolio/views/my-portfolio/misc_mockups/tablet_misc
 import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/desktop_provider_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/provider_mockups/mobile_provider_mockups.dart';
 import 'package:my_flutter_portfolio/views/my-portfolio/remediando/desktop_remediando.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/snake/desktop_snake.dart';
+import 'package:my_flutter_portfolio/views/my-portfolio/snake/mobile_snake.dart';
 import 'remediando/mobile_remediando.dart';
 
 class MyPortfolio extends StatefulWidget {
@@ -49,6 +51,15 @@ class _MyPortfolioState extends State<MyPortfolio> {
                 return const TabletMiscMockups();
               } else {
                 return const MobileMiscMockups();
+              }
+            },
+          ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (size.width > 950) {
+                return const DesktopSnake();
+              } else {
+                return const MobileSnake();
               }
             },
           ),

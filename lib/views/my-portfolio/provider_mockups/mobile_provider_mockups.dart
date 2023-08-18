@@ -42,7 +42,7 @@ class MobileProviderMockups extends StatelessWidget {
                 youtubeCode: 'Gl7aXzVsuvM',
               ),
               Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Padding(

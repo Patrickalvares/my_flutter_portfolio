@@ -23,4 +23,5 @@ class AppLinks {
       Uri.parse('https://github.com/Patrickalvares/desafio_cartao_de_credito');
   static Uri instagramMockup =
       Uri.parse('https://github.com/Patrickalvares/flutter_instagram_clone');
+  static Uri snakeLink = Uri.parse('https://github.com/swgem/GameSnake');
 }

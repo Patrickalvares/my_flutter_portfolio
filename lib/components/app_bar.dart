@@ -22,63 +22,68 @@ class _DesktopAppBarState extends State<DesktopAppBar> {
   Widget build(BuildContext context) {
     return PreferredSize(
       preferredSize: const Size.fromHeight(90.0),
-      child: AppBar(
-        backgroundColor: AppColors.backgroundColor,
-        toolbarHeight: 90,
-        titleSpacing: 100,
-        elevation: 2,
-        bottomOpacity: 23,
-        title: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 60,
-          ),
-          child: Row(children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Meu Portfólio',
-                  style: AppTextStyles.headerTextStyle()
-                      .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1920),
+          child: AppBar(
+            backgroundColor: AppColors.backgroundColor,
+            toolbarHeight: 90,
+            titleSpacing: 100,
+            elevation: 2,
+            bottomOpacity: 23,
+            title: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 60,
+              ),
+              child: Row(children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Meu Portfólio',
+                      style: AppTextStyles.headerTextStyle().copyWith(
+                          fontWeight: FontWeight.normal, fontSize: 30),
+                    ),
+                    const Text(
+                      'Desenvolvido por mim com Flutter',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    )
+                  ],
                 ),
-                const Text(
-                  'Desenvolvido por mim com Flutter',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                )
-              ],
+                const Spacer(),
+                const SizedBox(
+                  width: 40,
+                ),
+                AppBarHoverText(
+                  onTap: () => widget.onItemTap(1),
+                  style: AppTextStyles.headerTextStyle(),
+                  text: 'Início',
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                AppBarHoverText(
+                    onTap: () => widget.onItemTap(2),
+                    text: 'Sobre Mim',
+                    style: AppTextStyles.headerTextStyle()),
+                const SizedBox(
+                  width: 40,
+                ),
+                AppBarHoverText(
+                    onTap: () => widget.onItemTap(3),
+                    text: 'Serviços',
+                    style: AppTextStyles.headerTextStyle()),
+                const SizedBox(
+                  width: 40,
+                ),
+                AppBarHoverText(
+                    onTap: () => widget.onItemTap(4),
+                    text: 'Portfólio',
+                    style: AppTextStyles.headerTextStyle()),
+                const Spacer(),
+              ]),
             ),
-            const Spacer(),
-            const SizedBox(
-              width: 40,
-            ),
-            AppBarHoverText(
-              onTap: () => widget.onItemTap(1),
-              style: AppTextStyles.headerTextStyle(),
-              text: 'Início',
-            ),
-            const SizedBox(
-              width: 40,
-            ),
-            AppBarHoverText(
-                onTap: () => widget.onItemTap(2),
-                text: 'Sobre Mim',
-                style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            AppBarHoverText(
-                onTap: () => widget.onItemTap(3),
-                text: 'Serviços',
-                style: AppTextStyles.headerTextStyle()),
-            const SizedBox(
-              width: 40,
-            ),
-            AppBarHoverText(
-                onTap: () => widget.onItemTap(4),
-                text: 'Portfólio',
-                style: AppTextStyles.headerTextStyle()),
-            const Spacer(),
-          ]),
+          ),
         ),
       ),
     );

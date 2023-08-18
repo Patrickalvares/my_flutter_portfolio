@@ -52,12 +52,12 @@ class MobileRemediando extends StatelessWidget {
                         color: Colors.white,
                         fontWeight: FontWeight.normal),
                   ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  SimpleHtmlYoutubeIframe(
-                    key: key,
-                    youtubeCode: 'Zznm4VTGW0Y',
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: SimpleHtmlYoutubeIframe(
+                      key: key,
+                      youtubeCode: 'Zznm4VTGW0Y',
+                    ),
                   ),
                   Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -65,9 +65,9 @@ class MobileRemediando extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                              top: 10, left: 10, right: 10, bottom: 10),
+                              top: 10, left: 10, right: 5, bottom: 5),
                           child:
-                              RemediandoText(fontTextSize: 15).remediandoInfo,
+                              RemediandoText(fontTextSize: 18).remediandoInfo,
                         ),
                         RegularGithubButton(link: AppLinks.remediandoLink),
                       ]),
