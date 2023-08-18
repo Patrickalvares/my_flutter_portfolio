@@ -105,6 +105,24 @@ class AppTexts {
       color: Colors.white,
     ),
   );
+  static AutoSizeText iotCarText = AutoSizeText(
+    'Em um projeto colaborativo com meu amigo Eric, estamos atualmente '
+    'desenvolvendo um carrinho de brinquedo com uma característica especial: sua integração direta com um aplicativo '
+    'Flutter. Projetei e implementei este aplicativo que, por meio de um joystick virtual na tela, '
+    'envia comandos ao carrinho em tempo real. O coração dessa comunicação ágil é a nossa integração'
+    ' com o Firebase Realtime Database. Cada movimento do joystick é traduzido em coordenadas X e Y, '
+    'e imediatamente transmitido ao Firebase. O carrinho, por sua vez, lê essas informações e reage '
+    'de acordo. Esse fluxo contínuo de dados entre o aplicativo e o carrinho oferece um controle preciso '
+    'e dinâmico. Mesmo ainda em desenvolvimento, este projeto já demonstrou o imenso potencial '
+    'do Firebase em conectar diferentes plataformas.',
+    textAlign: TextAlign.justify,
+    minFontSize: 12,
+    style: GoogleFonts.mukta(
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+  );
 }
 
 class DesafioText extends StatelessWidget {

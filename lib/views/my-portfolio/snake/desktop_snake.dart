@@ -15,7 +15,7 @@ class DesktopSnake extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(
-          vertical: 30,
+          vertical: 60,
           horizontal: (size.width > 1314) ? size.width * 0.1 : 20),
       decoration: BoxDecoration(color: AppColors.backgroundColor),
       child: Row(

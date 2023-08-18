@@ -24,4 +24,6 @@ class AppLinks {
   static Uri instagramMockup =
       Uri.parse('https://github.com/Patrickalvares/flutter_instagram_clone');
   static Uri snakeLink = Uri.parse('https://github.com/swgem/GameSnake');
+  static Uri iotCarLink =
+      Uri.parse('https://github.com/Patrickalvares/my_iot_car_app');
 }
