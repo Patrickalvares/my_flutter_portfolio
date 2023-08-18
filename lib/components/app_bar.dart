@@ -91,7 +91,7 @@ class _DesktopAppBarState extends State<DesktopAppBar> {
 }
 
 class NonDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final double height = 90.0;
+  final double height = 65;
 
   const NonDesktopAppBar({super.key});
 
@@ -102,7 +102,7 @@ class NonDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.backgroundColor,
-      toolbarHeight: 90,
+      toolbarHeight: 65,
       elevation: 2,
       bottomOpacity: 23,
       leading: IconButton(
@@ -122,11 +122,11 @@ class NonDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
             Text(
               'Meu Portfólio',
               style: AppTextStyles.headerTextStyle()
-                  .copyWith(fontWeight: FontWeight.normal, fontSize: 30),
+                  .copyWith(fontWeight: FontWeight.normal, fontSize: 25),
             ),
             const Text(
               'Desenvolvido por mim com Flutter',
-              style: TextStyle(fontSize: 15, color: Colors.white),
+              style: TextStyle(fontSize: 14, color: Colors.white),
             ),
           ],
         ),

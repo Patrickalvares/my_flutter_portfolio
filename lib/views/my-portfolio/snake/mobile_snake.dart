@@ -35,8 +35,16 @@ class MobileSnake extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
               child: AppTexts.snakeText),
           RegularGithubButton(link: AppLinks.snakeLink),
+          const Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+              height: 20.0,
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30),
+            padding: const EdgeInsets.only(bottom: 30, top: 20),
             child: SnakeHtmlYoutubeIframe(
               key: key,
               youtubeCode: 'F-SNNm_e4RY',

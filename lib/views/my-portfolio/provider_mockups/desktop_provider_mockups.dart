@@ -24,6 +24,17 @@ class DesktopProviderMockups extends StatelessWidget {
               key: key,
               youtubeCode: 'Gl7aXzVsuvM',
             ),
+            const Padding(
+              padding: EdgeInsets.only(left: 25),
+              child: SizedBox(
+                height: 520,
+                child: VerticalDivider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                  width: 20.0,
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
               child: Column(

@@ -41,6 +41,14 @@ class MobileProviderMockups extends StatelessWidget {
                 key: key,
                 youtubeCode: 'Gl7aXzVsuvM',
               ),
+              const Padding(
+                padding: EdgeInsets.only(top: 15),
+                child: Divider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                  height: 20.0,
+                ),
+              ),
               Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,

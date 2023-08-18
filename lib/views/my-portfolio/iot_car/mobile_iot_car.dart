@@ -39,9 +39,17 @@ class MobileIotCar extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  SimpleHtmlYoutubeIframe(
+                  CarIotHtmlYoutubeIframe(
                     key: key,
                     youtubeCode: 'IPDkd636BcE',
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 30),
+                    child: Divider(
+                      color: Colors.grey,
+                      thickness: 1.0,
+                      height: 20.0,
+                    ),
                   ),
                   Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -49,7 +57,10 @@ class MobileIotCar extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                              left: 10, right: 10, bottom: 15, top: 15),
+                            left: 10,
+                            right: 10,
+                            bottom: 15,
+                          ),
                           child: AppTexts.iotCarText,
                         ),
                         RegularGithubButton(link: AppLinks.iotCarLink),

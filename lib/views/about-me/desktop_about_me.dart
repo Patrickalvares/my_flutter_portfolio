@@ -24,6 +24,17 @@ class DesktopAboutMe extends StatelessWidget {
               AppAssets.dev,
               height: 350,
             ),
+            const Padding(
+              padding: EdgeInsets.only(left: 25),
+              child: SizedBox(
+                height: 520,
+                child: VerticalDivider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                  width: 20.0,
+                ),
+              ),
+            ),
             const SizedBox(width: 25),
             Expanded(
               child: Column(

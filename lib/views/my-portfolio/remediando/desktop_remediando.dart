@@ -22,6 +22,17 @@ class DesktopRemediando extends StatelessWidget {
             key: key,
             youtubeCode: 'Zznm4VTGW0Y',
           ),
+          const Padding(
+            padding: EdgeInsets.only(left: 25),
+            child: SizedBox(
+              height: 520,
+              child: VerticalDivider(
+                color: Colors.grey,
+                thickness: 1.0,
+                width: 20.0,
+              ),
+            ),
+          ),
           Expanded(
             child: Column(
               children: [

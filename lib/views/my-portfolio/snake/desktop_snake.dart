@@ -24,6 +24,17 @@ class DesktopSnake extends StatelessWidget {
             key: key,
             youtubeCode: 'F-SNNm_e4RY',
           ),
+          const Padding(
+            padding: EdgeInsets.only(left: 25),
+            child: SizedBox(
+              height: 520,
+              child: VerticalDivider(
+                color: Colors.grey,
+                thickness: 1.0,
+                width: 20.0,
+              ),
+            ),
+          ),
           Expanded(
             child: Column(
               children: [

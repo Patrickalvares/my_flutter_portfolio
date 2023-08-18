@@ -25,6 +25,17 @@ class DesktopIotCar extends StatelessWidget {
             key: key,
             youtubeCode: 'IPDkd636BcE',
           ),
+          const Padding(
+            padding: EdgeInsets.only(left: 40),
+            child: SizedBox(
+              height: 490,
+              child: VerticalDivider(
+                color: Colors.grey,
+                thickness: 1.0,
+                width: 20.0,
+              ),
+            ),
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
