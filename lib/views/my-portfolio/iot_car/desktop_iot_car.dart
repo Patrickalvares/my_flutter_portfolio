@@ -13,8 +13,6 @@ class DesktopIotCar extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width,
-      height: size.height,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(vertical: 60, horizontal: size.width * 0.1),
       decoration: BoxDecoration(color: AppColors.backgroundColor2),

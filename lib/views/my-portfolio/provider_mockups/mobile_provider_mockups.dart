@@ -51,12 +51,14 @@ class MobileProviderMockups extends StatelessWidget {
               ),
               Column(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Padding(
                       padding: EdgeInsets.only(
                           left: 10, right: 10, bottom: 10, top: 15),
-                      child: DesafioText(fontTextSize: 18),
+                      child: DesafioText(
+                        fontTextSize: 18,
+                      ),
                     ),
                     RegularGithubButton(link: AppLinks.desafioProviderLink),
                   ]),

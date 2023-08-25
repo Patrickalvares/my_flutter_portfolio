@@ -26,4 +26,6 @@ class AppLinks {
   static Uri snakeLink = Uri.parse('https://github.com/swgem/GameSnake');
   static Uri iotCarLink =
       Uri.parse('https://github.com/Patrickalvares/my_iot_car_app');
+  static Uri portfolioRepoLink =
+      Uri.parse('https://github.com/Patrickalvares/my_flutter_portfolio');
 }

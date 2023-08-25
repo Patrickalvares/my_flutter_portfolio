@@ -31,6 +31,37 @@ class AppTexts {
       displayFullTextOnTap: true,
     ),
   );
+  static FadeInLeft mobileRollingTitles = FadeInLeft(
+    duration: const Duration(milliseconds: 1500),
+    delay: const Duration(milliseconds: 2700),
+    child: AnimatedTextKit(
+      repeatForever: true,
+      animatedTexts: [
+        TyperAnimatedText('Desenvolvedor Mobile',
+            textStyle: AppTextStyles.montseratStyle(color: Colors.yellow)
+                .copyWith(fontSize: 20)),
+        TyperAnimatedText('Desenvolvedor Flutter',
+            textStyle: AppTextStyles.montseratStyle(
+                    color: const Color.fromARGB(255, 32, 154, 255))
+                .copyWith(fontSize: 20)),
+        TyperAnimatedText('Eng. de Software',
+            textStyle: AppTextStyles.montseratStyle(color: Colors.orange)
+                .copyWith(fontSize: 20)),
+        TyperAnimatedText('Amante da Tecnologia',
+            textStyle: AppTextStyles.montseratStyle(color: Colors.red)
+                .copyWith(fontSize: 20)),
+        TyperAnimatedText('Aluno Dedicado',
+            textStyle: AppTextStyles.montseratStyle(color: Colors.purple)
+                .copyWith(fontSize: 20)),
+        TyperAnimatedText('Futuro Tech Lead',
+            textStyle: AppTextStyles.montseratStyle(color: Colors.green)
+                .copyWith(fontSize: 20)),
+      ],
+      pause: const Duration(milliseconds: 1000),
+      stopPauseOnTap: true,
+      displayFullTextOnTap: true,
+    ),
+  );
 
   static AutoSizeText aboutMeText = AutoSizeText(
       'Um entusiasta da tecnologia e desenvolvedor mobile especializado em Flutter e Dart,'
@@ -138,7 +169,7 @@ class DesafioText extends StatelessWidget {
       children: [
         AutoSizeText(
           '→ Suporte a temas claro e escuro.',
-          textAlign: TextAlign.right,
+          textAlign: TextAlign.start,
           overflow: TextOverflow.clip,
           style: GoogleFonts.mukta(
             fontSize: fontTextSize,

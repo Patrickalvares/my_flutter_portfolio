@@ -80,6 +80,13 @@ class _DesktopAppBarState extends State<DesktopAppBar> {
                     onTap: () => widget.onItemTap(4),
                     text: 'Portfólio',
                     style: AppTextStyles.headerTextStyle()),
+                const SizedBox(
+                  width: 40,
+                ),
+                AppBarHoverText(
+                    onTap: () => widget.onItemTap(5),
+                    text: 'Rodapé',
+                    style: AppTextStyles.headerTextStyle()),
                 const Spacer(),
               ]),
             ),
@@ -207,6 +214,16 @@ class CustomDrawerState extends State<CustomDrawer> {
               title: Text('Portfólio', style: AppTextStyles.headerTextStyle()),
               onTap: () {
                 widget.onItemTap(4);
+                Navigator.pop(context);
+              }),
+          ListTile(
+              leading: const Icon(
+                Icons.eject_outlined,
+                color: Colors.white,
+              ),
+              title: Text('Rodapé', style: AppTextStyles.headerTextStyle()),
+              onTap: () {
+                widget.onItemTap(5);
                 Navigator.pop(context);
               }),
         ],

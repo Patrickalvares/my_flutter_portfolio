@@ -23,7 +23,7 @@ class TabletFirstView extends StatelessWidget {
             top: size.height * 0.02,
             bottom: size.height * 0.04,
             right: 15,
-            left: 20),
+            left: 15),
         child: Column(
           children: [
             Column(
@@ -51,7 +51,8 @@ class TabletFirstView extends StatelessWidget {
                             'Hello World, it\'s me',
                             maxLines: 2,
                             overflow: TextOverflow.clip,
-                            style: AppTextStyles.montseratStyle(),
+                            style: AppTextStyles.montseratStyle()
+                                .copyWith(fontSize: 20),
                           ),
                         ),
                         const SizedBox(height: 15),
@@ -71,7 +72,7 @@ class TabletFirstView extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            AppTexts.rollingTitles,
+                            AppTexts.mobileRollingTitles,
                           ],
                         ),
                         const SizedBox(height: 22),
@@ -136,7 +137,7 @@ class TabletFirstView extends StatelessWidget {
                         ),
                         const SizedBox(height: 15),
                         SizedBox(
-                          width: size.width * 0.9,
+                          width: size.width * 0.85,
                           child: FadeInUp(
                               duration: const Duration(milliseconds: 1500),
                               delay: const Duration(milliseconds: 5800),

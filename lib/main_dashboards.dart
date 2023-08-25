@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_portfolio/components/app_bar.dart';
 import 'package:my_flutter_portfolio/constants/app_colors.dart';
+import 'package:my_flutter_portfolio/views/footer/desktop_footer.dart';
+import 'package:my_flutter_portfolio/views/footer/footer.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'views/about-me/about_me.dart';
 import 'views/first-view/first_view.dart';
@@ -80,6 +82,11 @@ class _MainDashBoardState extends State<MainDashBoard> {
                         key: const ValueKey(4),
                         controller: _controller,
                         child: const MyPortfolio()),
+                    AutoScrollTag(
+                        index: 5,
+                        key: const ValueKey(5),
+                        controller: _controller,
+                        child: const Footer()),
                   ],
                 ),
               ),
